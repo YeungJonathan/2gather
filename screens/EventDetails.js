@@ -67,10 +67,10 @@ class EventDetails extends React.Component {
                 </View>
 
                 <TouchableOpacity 
-                    style={{marginTop: 30, marginBottom: 15, alignItems:'center', borderWidth:1, marginLeft: '25%', marginRight:'25%', borderRadius:18}}
+                    style={{marginTop: 30, marginBottom: 30, alignItems:'center', borderWidth:1, marginLeft: '25%', marginRight:'25%', borderRadius:18}}
                     onPress={()=>Alert.alert('pew pew')}    
                 >
-                    <Text style={{fontSize:25, marginTop: 10, marginBottom: 35}}>
+                    <Text style={{fontSize:25, marginTop: 10, marginBottom: 13}}>
                         Join 
                     </Text>
                 </TouchableOpacity>
