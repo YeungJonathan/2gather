@@ -69,7 +69,7 @@ const UserDetailsDrawer = ({ navigation }) => (
             }
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Categories")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
           <ListItem
             title="Logout"
             titleStyle={{color:'red'}}
