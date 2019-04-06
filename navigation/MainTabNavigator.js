@@ -1,8 +1,14 @@
 import { createStackNavigator } from 'react-navigation';
-import HomeScreen from '../screens/HomeScreen';
+import Categories from '../screens/Categories';
+// import Launch from '../screens/Launch';
 
-const Authenticated = createStackNavigator({
-    Home: HomeScreen
-})
+const Authenticated = createStackNavigator(
+    {
+    Categories: {screen: Categories},
+    }, 
+    {
+        headerLayoutPreset: 'left'
+    }
+);
 
 export default Authenticated;
