@@ -11,7 +11,8 @@ class AppStore {
         { name: "mobile development", proficiency: 5 }
       ],
       description:
-        "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru."
+        "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru.",
+      previous: [1, 2, 3, 4, 5]
     }
   ];
 
@@ -22,7 +23,7 @@ class AppStore {
       time: "19:30",
       location: "Central 1 Theatre",
       going: 30,
-      starred: false,
+      starred: false
     },
     {
       id: 2,
@@ -30,7 +31,7 @@ class AppStore {
       time: "20:00",
       location: "Central 2 Theatre",
       going: 35,
-      starred: false,
+      starred: false
     },
     {
       id: 3,
@@ -38,7 +39,7 @@ class AppStore {
       time: "20:30",
       location: "Central 3 Theatre",
       going: 43,
-      starred: false,
+      starred: false
     },
     {
       id: 4,
@@ -46,7 +47,7 @@ class AppStore {
       time: "20:30",
       location: "Central 4 Theatre",
       going: 4,
-      starred: false,
+      starred: false
     },
     {
       id: 5,
@@ -54,7 +55,7 @@ class AppStore {
       time: "21:00",
       location: "Central 5 Theatre",
       going: 29,
-      starred: false,
+      starred: false
     },
     {
       id: 6,
@@ -62,7 +63,7 @@ class AppStore {
       time: "21:30",
       location: "Central 6 Theatre",
       going: 72,
-      starred: false,
+      starred: false
     },
     {
       id: 7,
@@ -70,7 +71,7 @@ class AppStore {
       time: "22:00",
       location: "Central 7 Theatre",
       going: 65,
-      starred: false,
+      starred: false
     },
     {
       id: 8,
@@ -78,7 +79,7 @@ class AppStore {
       time: "22:30",
       location: "Central 8 Theatre",
       going: 25,
-      starred: false,
+      starred: false
     },
     {
       id: 9,
@@ -86,7 +87,7 @@ class AppStore {
       time: "23:00",
       location: "Central 9 Theatre",
       going: 54,
-      starred: false,
+      starred: false
     },
     {
       id: 10,
@@ -94,7 +95,7 @@ class AppStore {
       time: "23:30",
       location: "Central 10 Theatre",
       going: 13,
-      starred: false,
+      starred: false
     },
     {
       id: 11,
@@ -102,7 +103,7 @@ class AppStore {
       time: "08:30",
       location: "Central 11 Theatre",
       going: 43,
-      starred: false,
+      starred: false
     },
     {
       id: 12,
@@ -110,7 +111,7 @@ class AppStore {
       time: "09:30",
       location: "Central 12 Theatre",
       going: 47,
-      starred: false,
+      starred: false
     }
   ];
 }
