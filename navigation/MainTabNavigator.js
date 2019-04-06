@@ -1,4 +1,3 @@
-
 import { createStackNavigator, createDrawerNavigator } from "react-navigation";
 import Categories from "../screens/Categories";
 import UserDetails from "../screens/UserDetails";
@@ -7,10 +6,13 @@ import EventsList from "../screens/EventsList";
 import EventDetails from "../screens/EventDetails";
 import StarredList from "../screens/StarredList";
 import Create from "../screens/Create";
+import loginScreen from "../screens/loginScreen";
+
 const Authenticated = createDrawerNavigator(
   {
     MainStack: createStackNavigator({
-      Categories,
+        loginScreen,
+        Categories,
       UserDetails,
       EventsList,
       EventDetails,
