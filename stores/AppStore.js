@@ -12,7 +12,11 @@ class AppStore {
       ],
       description:
         "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru.",
-      previous: [5, 3, 2, 6]
+      previous: [
+          {id: 5, categoryName: 'education'}, 
+          {id: 3, categoryName: 'tech'}, 
+          {id: 2, categoryName: 'health'}, 
+          {id: 6, categoryName: 'others'}]
     }
   ];
   @observable events = {

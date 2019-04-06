@@ -20,21 +20,21 @@ export default class UserDetails extends React.Component {
         <UserDescription description={appStore.users[0].description} />
         <Interests user={appStore.users[0]} />
         <Card title="History">
-          {appStore.users[0].previous.map(eventId => (
+          {appStore.users[0].previous.map((item) => (
             <TouchableOpacity
-              key={console.log(eventId.toString())}
+              key={item.id.toString()}
               onPress={() =>
                 this.props.navigation.navigate(
                   "EventDetails",
-                  appStore.events[eventId]
+                  appStore.events[item.categoryName][item.id]
                 )
               }
             >
-              <ListItem title={appStore.events[eventId - 1].title} />
+              <ListItem title={appStore.events[item.categoryName][item.id].title} />
             </TouchableOpacity>
           ))}
         </Card>
-        <UnitList units={appStore.users.units} />
+        {/* <UnitList units={appStore.users.units} /> */}
       </ScrollView>
     );
   }
