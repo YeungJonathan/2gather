@@ -4,7 +4,7 @@ import {
   ListItem,
 } from "react-native-elements";
 
-const Profile = ({ user, onPress=()=>{null} }) => (
+const Profile = ({ user, onPress=()=>{null}, disabled }) => (
   <View>
     <Image
       source={{
@@ -14,6 +14,7 @@ const Profile = ({ user, onPress=()=>{null} }) => (
       style={{ width: "100%", height: 200 }}
     />
     <TouchableOpacity
+      disabled={disabled}
       onPress={() => onPress()}
     >
       <ListItem
@@ -23,7 +24,7 @@ const Profile = ({ user, onPress=()=>{null} }) => (
         }}
         title={user.name}
         subtitle={user.role}
-        chevron
+        chevron={!disabled}
       />
     </TouchableOpacity>
   </View>
