@@ -55,24 +55,13 @@ class EventCard extends React.Component {
                                     >
                                         {title}
                                     </Text>
+                                </View>
+                                <View style={{flexDirection:'row'}}>
                                     <Text 
-                                        style={{paddingLeft: 20, fontWeight:'bold', fontSize:20}}> 
-                                        @{time}
+                                        style={{fontSize:16}}> 
+                                        {location}  @{time}, {date}
                                     </Text>
                                 </View>
-                                <Text
-                                    style={{fontSize:16,fontStyle:"italic"}}
-                                >
-                                    {location}
-                                </Text>
-                            </View>
-                            <View style={{flexDirection:'column'}}>
-                                <Text style={{marginLeft: 30, marginTop:28, fontSize:16}}>
-                                    Going:
-                                </Text>
-                                <Text style={{marginLeft: 43, marginTop:5, fontSize:16}}>
-                                    {going}
-                                </Text>
                             </View>
                         </View>
                     </TouchableOpacity>
