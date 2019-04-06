@@ -1,7 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Alert, Image, ScrollView } from 'react-native';
-import { observer, renderReporter } from 'mobx-react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { View, Text } from 'react-native';
 import { Rating } from 'react-native-ratings';
 
 const SkillsRequired = ({skill}) => (
