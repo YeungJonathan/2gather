@@ -1,9 +1,9 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { observer } from 'mobx-react';
-import { Card } from 'react-native-material-ui';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import appStore from '../stores/AppStore';
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { observer } from "mobx-react";
+import { Card } from "react-native-material-ui";
+import Icon from "react-native-vector-icons/FontAwesome";
+import appStore from "../stores/AppStore";
 
 @observer
 class EventCard extends React.Component {
@@ -18,8 +18,7 @@ class EventCard extends React.Component {
             location: this.eventInformation.location,
             going: this.eventInformation.going,
             date: this.eventInformation.date,
-        }
-        // console.log(props.categoryName)
+        };
     }
 
     render() {
@@ -76,8 +75,8 @@ class EventCard extends React.Component {
                     </TouchableOpacity>
                 </Card>
             </View>
-        );
-    }
+    );
+  }
 }
 
 export default EventCard;

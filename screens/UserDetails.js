@@ -7,6 +7,7 @@ import { ListItem, Card } from "react-native-elements";
 import appStore from "../stores/AppStore";
 import InterestItem from '../components/InterestItem';
 
+import UnitsList from "../components/UnitsList";
 
 export default class UserDetails extends React.Component {
   static navigationOptions = () => {
@@ -32,19 +33,24 @@ export default class UserDetails extends React.Component {
             />
         </Card>
         <Card title="History">
-          {appStore.users[0].previous.map(eventId => (
+          {appStore.users[0].previous.map(item => (
             <TouchableOpacity
-              key={eventId.toString()}
+              key={item.id.toString()}
               onPress={() =>
                 this.props.navigation.navigate(
                   "EventDetails",
-                  appStore.events[eventId - 1]
+                  appStore.events[item.categoryName][item.id]
                 )
               }
             >
-              <ListItem title={appStore.events[eventId - 1].title} />
+              <ListItem
+                title={appStore.events[item.categoryName][item.id].title}
+              />
             </TouchableOpacity>
           ))}
+        </Card>
+        <Card title="Units">
+          <UnitsList units={appStore.users[0].units} />
         </Card>
       </ScrollView>
     );
