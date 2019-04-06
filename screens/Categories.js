@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text } from "react-native";
+import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text} from "react-native";
 import { Icon } from "react-native-elements";
 import CategoryItem from "../components/CategoryItem";
 import appStore from '../stores/AppStore';
@@ -81,9 +81,10 @@ export default class Categories extends React.Component {
   render() {
       const {navigation} = this.props;
     return (
+
       <View style={{ flex: 1, height: "100%" }}>
         <ScrollView style={{ flex: 9 }}>
-          <FlatList
+                <FlatList
             data={categoriesList}
             keyExtractor={(_, index) => index.toString()}
             renderItem={item => (
