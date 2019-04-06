@@ -1,7 +1,8 @@
 import React from "react";
-import { View, FlatList, TouchableOpacity } from "react-native";
+import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text } from "react-native";
 import { Icon } from "react-native-elements";
 import CategoryItem from "../components/CategoryItem";
+import {fakeEventItems} from '../constants/FakeEventItems';
 
 const categoriesList = [
   {
@@ -56,6 +57,10 @@ const categoriesList = [
   }
 ];
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
 export default class Categories extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const headerLeft = (
@@ -74,9 +79,10 @@ export default class Categories extends React.Component {
   };
 
   render() {
+      const {navigation} = this.props;
     return (
       <View style={{ flex: 1, height: "100%" }}>
-        <View style={{ flex: 9 }}>
+        <ScrollView style={{ flex: 9 }}>
           <FlatList
             data={categoriesList}
             keyExtractor={(_, index) => index.toString()}
@@ -84,11 +90,43 @@ export default class Categories extends React.Component {
               <CategoryItem
                 categoryName={item.item.categoryName}
                 image={item.item.image}
-                navigation={this.props.navigation}
+                navigation={navigation}
               />
             )}
           />
-        </View>
+          <TouchableOpacity
+                onPress={() => {
+                    console.log(fakeEventItems.length)
+                    const random = getRandomInt(fakeEventItems.length),
+                        eventInformation = {
+                            id: fakeEventItems[random].id,
+                            title: fakeEventItems[random].title,
+                            time: fakeEventItems[random].time,
+                            location: fakeEventItems[random].location,
+                            going: fakeEventItems[random].going
+                        };
+                    console.log('HALB', random);
+                    console.log('BLAH', eventInformation)
+                    navigation.navigate('EventDetails', eventInformation);
+                }}
+            >
+                <ImageBackground
+                    source={{uri: 'https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'}}
+                    style={{height: 100, width: '100%'}}
+                >
+                    <Text style={{color: 'white', 
+                        fontSize: 24, 
+                        marginTop: 40, 
+                        marginLeft: 10, 
+                        textShadowOffset: {width: 2, height: 1},
+                        textShadowColor: 'grey'
+                        }}
+                    >
+                        Feeling Lucky?
+                    </Text>
+                </ImageBackground>
+            </TouchableOpacity>
+        </ScrollView>
       </View>
     );
   }
