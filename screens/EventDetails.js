@@ -54,6 +54,7 @@ class EventDetails extends React.Component {
                             Reviews: 
                         </Text>
                         <Rating
+                            readonly
                             startingValue={4}
                             style={{marginBottom:30}}
                             type='heart'
