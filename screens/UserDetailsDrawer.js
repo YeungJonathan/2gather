@@ -72,9 +72,10 @@ const UserDetailsDrawer = ({ navigation }) => (
         <TouchableOpacity onPress={() => navigation.navigate("Categories")}>
           <ListItem
             title="Logout"
+            titleStyle={{color:'red'}}
             subtitle=""
             leftAvatar={
-              <Icon reverse name="sign-out" type="font-awesome" size={15} />
+              <Icon reverse name="sign-out" type="font-awesome" size={15} color='red'/>
             }
           />
         </TouchableOpacity>
