@@ -19,7 +19,7 @@ class EventCard extends React.Component {
             going: this.eventInformation.going,
             date: this.eventInformation.date,
         }
-        console.log(props.categoryName)
+        // console.log(props.categoryName)
     }
 
     render() {
