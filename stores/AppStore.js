@@ -16,7 +16,7 @@ class AppStore {
     }
   ];
 
-    @observable events = [
+    @observable events = 
         {
             education: [
                 {
@@ -120,12 +120,10 @@ class AppStore {
                     starred: false
                 },
             ],
-        },
-        {
             sport: [
                 {
                     id:1,
-                    title: 'Java Tutorial',
+                    title: 'Golf',
                     date: 'Sat 6 Apr',
                     time: '19:30',
                     location: 'Central 1 Theatre',
@@ -135,7 +133,7 @@ class AppStore {
                 },
                 {
                     id:2,
-                    title: 'Coding interview meetup',
+                    title: 'Chess',
                     date: 'Sat 6 Apr',
                     time: '20:00',
                     location: 'Central 2 Theatre',
@@ -145,7 +143,7 @@ class AppStore {
                 },
                 {
                     id:3,
-                    title: "Computer Hacking skills",
+                    title: "Football",
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 3 Theatre',
@@ -155,7 +153,7 @@ class AppStore {
                 },
                 {
                     id:4,
-                    title: 'Advanced python meetup',
+                    title: 'Basketball',
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 4 Theatre',
@@ -165,7 +163,7 @@ class AppStore {
                 },
                 {
                     id:5,
-                    title: 'React Native noob meetup',
+                    title: 'Swimming',
                     time: '21:00',
                     date: 'Sat 7 Apr',
                     location: 'Central 5 Theatre',
@@ -175,7 +173,7 @@ class AppStore {
                 },
                 {
                     id:6,
-                    title: 'React simple meetup',
+                    title: 'Horseback riding',
                     time: '21:30',
                     date: 'Sat 8 Apr',
                     location: 'Central 6 Theatre',
@@ -185,7 +183,7 @@ class AppStore {
                 },
                 {
                     id:7,
-                    title: 'C++ meetup',
+                    title: 'Archery',
                     date: 'Sat 9 Apr',
                     time: '22:00',
                     location: 'Central 7 Theatre',
@@ -195,7 +193,7 @@ class AppStore {
                 },
                 {
                     id:8,
-                    title: 'PHP Yikes meetup',
+                    title: 'Baseball',
                     time: '22:30',
                     date: 'Sat 10 Apr',
                     location: 'Central 8 Theatre',
@@ -205,7 +203,7 @@ class AppStore {
                 },
                 {
                     id:9,
-                    title: 'C Code meetup',
+                    title: 'Soccer',
                     time: '23:00',
                     date: 'Sat 11 Apr',
                     location: 'Central 9 Theatre',
@@ -215,7 +213,7 @@ class AppStore {
                 },
                 {
                     id:10,
-                    title: 'Medium Ruby',
+                    title: 'Curling',
                     time: '23:30',
                     date: 'Sat 11 Apr',
                     location: 'Central 10 Theatre',
@@ -224,12 +222,10 @@ class AppStore {
                     starred: false
                 },
             ],
-        },
-        {
             business: [
                 {
                     id:1,
-                    title: 'Java Tutorial',
+                    title: 'Ideation',
                     date: 'Sat 6 Apr',
                     time: '19:30',
                     location: 'Central 1 Theatre',
@@ -239,7 +235,7 @@ class AppStore {
                 },
                 {
                     id:2,
-                    title: 'Coding interview meetup',
+                    title: 'Entrepreneurial Skills',
                     date: 'Sat 6 Apr',
                     time: '20:00',
                     location: 'Central 2 Theatre',
@@ -249,7 +245,7 @@ class AppStore {
                 },
                 {
                     id:3,
-                    title: "Computer Hacking skills",
+                    title: "Startup ideas",
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 3 Theatre',
@@ -259,7 +255,7 @@ class AppStore {
                 },
                 {
                     id:4,
-                    title: 'Advanced python meetup',
+                    title: 'Fake it till you make it',
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 4 Theatre',
@@ -269,7 +265,7 @@ class AppStore {
                 },
                 {
                     id:5,
-                    title: 'React Native noob meetup',
+                    title: 'Capital raising',
                     time: '21:00',
                     date: 'Sat 7 Apr',
                     location: 'Central 5 Theatre',
@@ -279,7 +275,7 @@ class AppStore {
                 },
                 {
                     id:6,
-                    title: 'React simple meetup',
+                    title: 'Budget management',
                     time: '21:30',
                     date: 'Sat 8 Apr',
                     location: 'Central 6 Theatre',
@@ -289,7 +285,7 @@ class AppStore {
                 },
                 {
                     id:7,
-                    title: 'C++ meetup',
+                    title: 'HR management',
                     date: 'Sat 9 Apr',
                     time: '22:00',
                     location: 'Central 7 Theatre',
@@ -299,7 +295,7 @@ class AppStore {
                 },
                 {
                     id:8,
-                    title: 'PHP Yikes meetup',
+                    title: 'TED Talk by Tim Appple',
                     time: '22:30',
                     date: 'Sat 10 Apr',
                     location: 'Central 8 Theatre',
@@ -309,7 +305,7 @@ class AppStore {
                 },
                 {
                     id:9,
-                    title: 'C Code meetup',
+                    title: 'The Art of the Deal',
                     time: '23:00',
                     date: 'Sat 11 Apr',
                     location: 'Central 9 Theatre',
@@ -319,7 +315,7 @@ class AppStore {
                 },
                 {
                     id:10,
-                    title: 'Medium Ruby',
+                    title: 'Trends in Business',
                     time: '23:30',
                     date: 'Sat 11 Apr',
                     location: 'Central 10 Theatre',
@@ -328,12 +324,10 @@ class AppStore {
                     starred: false
                 },
             ],
-        },
-        {
             health: [
                 {
                     id:1,
-                    title: 'Java Tutorial',
+                    title: 'Go Vegan',
                     date: 'Sat 6 Apr',
                     time: '19:30',
                     location: 'Central 1 Theatre',
@@ -343,7 +337,7 @@ class AppStore {
                 },
                 {
                     id:2,
-                    title: 'Coding interview meetup',
+                    title: 'Meal prep',
                     date: 'Sat 6 Apr',
                     time: '20:00',
                     location: 'Central 2 Theatre',
@@ -353,7 +347,7 @@ class AppStore {
                 },
                 {
                     id:3,
-                    title: "Computer Hacking skills",
+                    title: "Debunking the food plate myth",
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 3 Theatre',
@@ -363,7 +357,7 @@ class AppStore {
                 },
                 {
                     id:4,
-                    title: 'Advanced python meetup',
+                    title: 'Alcoholics Anonymous',
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 4 Theatre',
@@ -373,7 +367,7 @@ class AppStore {
                 },
                 {
                     id:5,
-                    title: 'React Native noob meetup',
+                    title: 'Cancer survivors',
                     time: '21:00',
                     date: 'Sat 7 Apr',
                     location: 'Central 5 Theatre',
@@ -383,7 +377,7 @@ class AppStore {
                 },
                 {
                     id:6,
-                    title: 'React simple meetup',
+                    title: 'The importance of exercise',
                     time: '21:30',
                     date: 'Sat 8 Apr',
                     location: 'Central 6 Theatre',
@@ -393,7 +387,7 @@ class AppStore {
                 },
                 {
                     id:7,
-                    title: 'C++ meetup',
+                    title: 'Gym buddies',
                     date: 'Sat 9 Apr',
                     time: '22:00',
                     location: 'Central 7 Theatre',
@@ -403,7 +397,7 @@ class AppStore {
                 },
                 {
                     id:8,
-                    title: 'PHP Yikes meetup',
+                    title: 'Cheap pharmacy deals',
                     time: '22:30',
                     date: 'Sat 10 Apr',
                     location: 'Central 8 Theatre',
@@ -413,7 +407,7 @@ class AppStore {
                 },
                 {
                     id:9,
-                    title: 'C Code meetup',
+                    title: 'Meal sharing',
                     time: '23:00',
                     date: 'Sat 11 Apr',
                     location: 'Central 9 Theatre',
@@ -423,7 +417,7 @@ class AppStore {
                 },
                 {
                     id:10,
-                    title: 'Medium Ruby',
+                    title: 'Trashbag Challenge',
                     time: '23:30',
                     date: 'Sat 11 Apr',
                     location: 'Central 10 Theatre',
@@ -432,8 +426,6 @@ class AppStore {
                     starred: false
                 },
             ],
-        },
-        {
             tech: [
                 {
                     id:1,
@@ -535,9 +527,8 @@ class AppStore {
                     skills:[{skill:"Ruby", rank:3}],
                     starred: false
                 },
-            ],
-        },
-    ]
+            ],   
+    }
 }
 
 const appStore = new AppStore();

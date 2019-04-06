@@ -96,11 +96,8 @@ export default class Categories extends React.Component {
           />
           <TouchableOpacity
                 onPress={() => {
-                    console.log(fakeEventItems.length)
                     const random = getRandomInt(fakeEventItems.length),
                         eventInformation = fakeEventItems[random];
-                    console.log('HALB', random);
-                    console.log('BLAH', eventInformation)
                     navigation.navigate('EventDetails', eventInformation);
                 }}
             >

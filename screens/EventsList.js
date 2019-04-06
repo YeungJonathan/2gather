@@ -29,11 +29,12 @@ class EventsList extends React.Component {
     }
 
     render() {
-        const { navigation } = this.props;
+        const { navigation } = this.props,
+            categoryName = navigation.getParam('categoryName').toLowerCase();
         return (
             <View style={{flex:1, height:'100%'}}>
                 <FlatList
-                    data={appStore.events}
+                    data={appStore.events[categoryName]}
                     keyExtractor={item => item.id.toString()}
                     renderItem={eventInformation => (
                         <EventCard

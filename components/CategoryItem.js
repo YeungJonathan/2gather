@@ -17,7 +17,7 @@ export default class CategoryItem extends React.Component {
         return(
             <>
             <TouchableOpacity
-                onPress={() => this.props.navigation.navigate('EventsList')}
+                onPress={() => this.props.navigation.navigate('EventsList', {categoryName: categoryName})}
             >
                 <ImageBackground
                     source={{uri: image}}
