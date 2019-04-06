@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, FlatList, Text } from 'react-native';
+import { View, FlatList, TouchableOpacity } from 'react-native';
+import { Icon } from 'react-native-elements';
 import CategoryItem from '../components/CategoryItem';
 
 const categoriesList = [
@@ -47,9 +48,15 @@ const categoriesList = [
 
 export default class Categories extends React.Component {
     static navigationOptions = ({ navigation }) => {
-        const headerTitle = <Text style={{fontSize: 18}}>Categories</Text>
+        const headerLeft = (
+            <TouchableOpacity
+                onPress={() => navigation.openDrawer()}
+            >
+                <Icon name='bars' type='font-awesome' containerStyle={{ paddingLeft: 15}}/>
+            </TouchableOpacity>);
         return({
             title: 'Categories',
+            headerLeft: headerLeft,
         });
     };
 
