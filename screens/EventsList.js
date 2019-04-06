@@ -18,7 +18,7 @@ class EventsList extends React.Component {
         );
         return({
             title: 'Events',
-            headerLeft: headerLeft,
+            // headerLeft: headerLeft,
         });
     };
 
