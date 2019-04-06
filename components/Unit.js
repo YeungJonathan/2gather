@@ -6,10 +6,9 @@ const Unit = ({ unit }) => {
     <ListItem
       leftAvatar={{
         title: name[0],
-        source: { uri: avatar_url },
         showEditButton: false
       }}
-      title={unit.title}
+      title={name}
       chevron
     />
   );
