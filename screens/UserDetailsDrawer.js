@@ -7,7 +7,7 @@ import {
   View
 } from "react-native";
 import Profile from "../components/Profile";
-import users from "../constants/FakeUserData";
+import appStore from "../stores/AppStore";
 import { Divider, ListItem, Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
@@ -26,7 +26,7 @@ const UserDetailsDrawer = ({ navigation }) => (
       forceInset={{ top: "always", horizontal: "never" }}
     >
       <Profile
-        user={users[0]}
+        user={appStore.users[0]}
         onPress={() => navigation.navigate("UserDetails")}
       />
       <Divider style={{ backgroundColor: "grey", height: 1 }} />
@@ -49,7 +49,7 @@ const UserDetailsDrawer = ({ navigation }) => (
             }
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Starred")}>
+        <TouchableOpacity onPress={() => navigation.navigate("StarredList")}>
           <ListItem
             title="Starred"
             subtitle=""
@@ -72,9 +72,10 @@ const UserDetailsDrawer = ({ navigation }) => (
         <TouchableOpacity onPress={() => navigation.navigate("Categories")}>
           <ListItem
             title="Logout"
+            titleStyle={{color:'red'}}
             subtitle=""
             leftAvatar={
-              <Icon reverse name="sign-out" type="font-awesome" size={15} />
+              <Icon reverse name="sign-out" type="font-awesome" size={15} color='red'/>
             }
           />
         </TouchableOpacity>

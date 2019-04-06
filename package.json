@@ -19,7 +19,11 @@
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-elements": "^1.1.0",
+    "react-native-keyboard-aware-scroll-view": "^0.8.0",
+    "react-native-material-dropdown": "^0.11.1",
     "react-native-material-ui": "^1.30.1",
+    "react-native-modal-datetime-picker": "^6.1.0",
+    "react-native-picker-select": "^6.1.0",
     "react-native-ratings": "^6.3.1",
     "react-native-vector-icons": "^6.4.2",
     "react-navigation": "^3.0.9"
