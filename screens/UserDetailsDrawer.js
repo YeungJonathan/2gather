@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< Updated upstream
 import {
   SafeAreaView,
   ScrollView,
@@ -10,17 +9,10 @@ import {
 import Profile from "../components/Profile";
 import appStore from "../stores/AppStore";
 import { Divider, ListItem, Icon } from "react-native-elements";
-=======
-import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
-import Profile from "../components/Profile";
-import users from "../constants/FakeUserData";
-import { Divider } from "react-native-elements";
->>>>>>> Stashed changes
 
 const styles = StyleSheet.create({
   container: {
     flex: 1
-<<<<<<< Updated upstream
   },
   ListItem: {
     // paddingTop: -20,
@@ -28,18 +20,11 @@ const styles = StyleSheet.create({
 });
 
 const UserDetailsDrawer = ({ navigation }) => (
-=======
-  }
-});
-
-const UserDetailsDrawer = () => (
->>>>>>> Stashed changes
   <ScrollView>
     <SafeAreaView
       style={styles.container}
       forceInset={{ top: "always", horizontal: "never" }}
     >
-<<<<<<< Updated upstream
       <Profile
         user={appStore.users[0]}
         onPress={() => navigation.navigate("UserDetails")}
@@ -94,10 +79,6 @@ const UserDetailsDrawer = () => (
           />
         </TouchableOpacity>
       </View>
-=======
-      <Profile user={users[0]} />
-      <Divider style={{ backgroundColor: "blue" }} />;
->>>>>>> Stashed changes
     </SafeAreaView>
   </ScrollView>
 );

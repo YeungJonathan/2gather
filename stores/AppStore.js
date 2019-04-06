@@ -12,7 +12,7 @@ class AppStore {
       ],
       description:
         "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru.",
-      previous: [1, 2, 3, 4, 5]
+      previous: [5, 3, 2, 6]
     }
   ];
 
