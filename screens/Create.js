@@ -18,16 +18,14 @@ const styles = StyleSheet.create({
 });
 
 export default class Create extends Component{
-    state = {
-        isDateTimePickerVisible: false,
-    };
 
     _showDateTimePicker = () => this.setState({ isDateTimePickerVisible: true });
 
     _hideDateTimePicker = () => this.setState({ isDateTimePickerVisible: false });
 
-    _handleDatePicked = (date) => {
-        console.log('A date has been picked: ', date);
+    _handleDatePicked = (datetime) => {
+        console.log('A date has been picked: ', datetime);
+        this.setState({time:datetime})
         this._hideDateTimePicker();
     };
 
@@ -37,7 +35,20 @@ export default class Create extends Component{
             sessionName: props.name,
             ExpectedSkills: props.name,
             text: '',
+            isDateTimePickerVisible: false,
+            date:''
         };
+    }
+
+    getDisplayTime(date){
+        if (date==''){
+            return 'Select Meet-up Date&Time'
+        }
+        const displayTime = new Date(date);
+        const day = displayTime.getDate();
+        const month = displayTime.getMonth()+1;
+        const year = displayTime.getFullYear();
+        return day + '/' + month +'/'+ year
     }
 
     render(){
@@ -63,7 +74,8 @@ export default class Create extends Component{
             value: 'Others',
         }];
         let uri= 'https://i.pinimg.com/564x/61/ed/e8/61ede8bf40bb73901184253fd08d3cfa.jpg';
-        const {text} = this.state;
+        const {text,time} = this.state;
+        const displayTime = time===''?'Select Meet-up Date&Time': this.getDisplayTime(time);
         return(
             <KeyboardAwareScrollView>
                 <ImageBackground
@@ -74,7 +86,7 @@ export default class Create extends Component{
                     <View style = {{flex:1, flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center', padding:35}}>
                         <Text style = {styles.bigBlack}> Create Session </Text>
                     </View>
-                    <View style = {{flexDirection: 'column', alignItems: "left"}}>
+                    <View style = {{flexDirection: 'column', alignItems: "left", marginTop:15}}>
                         <Text style = {styles.smallWhite}> Category Type: </Text>
                         <Dropdown
                             style={{width:'100%'}}
@@ -84,7 +96,7 @@ export default class Create extends Component{
                         />
                     </View>
 
-                    <View style = {{flex:1.5, flexDirection: 'column', alignItems: "left"}}>
+                    <View style = {{flex:1.5, flexDirection: 'column', alignItems: "left", marginTop:15}}>
                         <Text style = {styles.smallWhite}> Session Name : </Text>
                         <TextInput
                             style = {{marginTop:10, borderBottomWidth: 1, borderBottomColor:'grey', width:"100%", marginLeft:10, color:'black'}}
@@ -94,7 +106,7 @@ export default class Create extends Component{
                         />
                     </View>
 
-                    <View style = {{flex:1, flexDirection: 'column', justifyContent: 'space-between', marginTop:5}}>
+                    <View style = {{flex:1, flexDirection: 'column', justifyContent: 'space-between', marginTop:15}}>
                         <Text style = {styles.smallWhite}> Expected Skills:  </Text>
                         <TextInput
                             style = {{marginTop:10, borderBottomWidth: 1, borderBottomColor:'grey', width:"100%", marginLeft:10, color:'black'}}
@@ -102,7 +114,7 @@ export default class Create extends Component{
                         />
                     </View>
 
-                    <View style = {{flex:1, flexDirection: 'column', justifyContent: 'space-between', marginTop:5}}>
+                    <View style = {{flex:1, flexDirection: 'column', justifyContent: 'space-between', marginTop:15}}>
                         <Text style = {styles.smallWhite}> Meet-up Location  </Text>
                         <TextInput
                             style = {{marginTop:10, borderBottomWidth: 1, borderBottomColor:'grey', width:"100%", marginLeft:10, color:'black'}}
@@ -110,29 +122,29 @@ export default class Create extends Component{
                         />
                     </View>
 
-                    <View style = {{flex:1, flexDirection: 'column', justifyContent: 'space-between', marginTop:5,borderBottomWidth: 1, borderBottomColor:'grey', minimumDate: '2019-04-06'}}>
-                        <Text style = {styles.smallWhite}> Meet-up Date&Time:  </Text>
-                        <View style={{ flex: 1 }}>
-                            <TouchableOpacity onPress={this._showDateTimePicker}>
-                                <Text>Select Meet-up Date</Text>
+                    <View style = {{flex:1, flexDirection: 'column', justifyContent: 'space-between', marginTop:15,borderBottomWidth: 1, borderBottomColor:'grey', minimumDate: '2'}}>
+                        <Text style = {{marginTop:15}}> Meet-up Date&Time:  </Text>
+                        <View style={{ flex: 1, marginTop:15 }}>
+                            <TouchableOpacity
+                                style={{marginBottom:15}}
+                                onPress={this._showDateTimePicker}>
+                                <Text>{displayTime}</Text>
                             </TouchableOpacity>
                             <DateTimePicker
                                 isVisible={this.state.isDateTimePickerVisible}
                                 onConfirm={this._handleDatePicked}
                                 onCancel={this._hideDateTimePicker}
+                                mode = 'datetime'
+                                is24Hour = {true}
                             />
                         </View>
-                    </View>
-
-                    <View style = {{flex:2, flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <Text> </Text>
                     </View>
 
                     <TouchableOpacity style={{
                         borderWidth:1,
                         borderColor: 'black',
                         borderRadius:15,
-                        paddingTop:15,
+                        marginTop:25,
                         paddingBottom:15,
                         alignItems:'center',
                         marginLeft:'25%',
@@ -144,17 +156,13 @@ export default class Create extends Component{
                         <Text
                         style={{
                             color:'white',
-                            paddingTop:7,
-                            paddingBottom:7
+                            paddingTop:10,
+                            paddingBottom:4
                             }}
                         >
                             Submit
                         </Text>
                     </TouchableOpacity>
-
-                    <View style = {{flex:2, flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <Text> </Text>
-                    </View>
                 </View>
             </ImageBackground>
             </KeyboardAwareScrollView>
