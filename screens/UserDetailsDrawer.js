@@ -3,14 +3,12 @@ import {
   SafeAreaView,
   ScrollView,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View
 } from "react-native";
 import Profile from "../components/Profile";
 import users from "../constants/FakeUserData";
-import { Divider, ListItem, Button, Icon } from "react-native-elements";
-import { NavigationActions } from "react-navigation";
+import { Divider, ListItem, Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
   container: {

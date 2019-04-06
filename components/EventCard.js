@@ -8,17 +8,18 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 class EventCard extends React.Component {
     constructor(props) {
         super(props);
-        const eventInformation = props.eventInformation;
+        this.eventInformation = props.eventInformation;
         this.state = {
-            title:eventInformation.title,
-            time:eventInformation.time,
-            location:eventInformation.location,
+            title:this.eventInformation.title,
+            time:this.eventInformation.time,
+            location:this.eventInformation.location,
+            going: this.eventInformation.going,
             star: false
         }
     }
 
     render() {
-        const {title, time, location,star} = this.state;
+        const {title, time, location,star,going} = this.state;
         const starred = star? "flex":"none";
         const notStarred = star?"none":"flex";
         return (
@@ -27,9 +28,9 @@ class EventCard extends React.Component {
                     <TouchableOpacity
                         style={{height:100, backgroundColor:'#E2EFFD'
                     }}
-                        onPress={() => {
-                            Alert.alert('View Event')
-                        }}
+                        onPress={() => 
+                            this.props.navigation.navigate('EventDetails', this.eventInformation)
+                        }
                     >
                         <View style={{flexDirection:'row', paddingLeft: 35}}>
                             <TouchableOpacity 
@@ -70,6 +71,14 @@ class EventCard extends React.Component {
                                     style={{fontSize:16,fontStyle:"italic"}}
                                 >
                                     {location}
+                                </Text>
+                            </View>
+                            <View style={{flexDirection:'column'}}>
+                                <Text style={{marginLeft: 30, marginTop:28, fontSize:16}}>
+                                    Going:
+                                </Text>
+                                <Text style={{marginLeft: 43, marginTop:5, fontSize:16}}>
+                                    {going}
                                 </Text>
                             </View>
                         </View>
