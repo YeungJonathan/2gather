@@ -1,7 +1,6 @@
 import React from "react";
-import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text, Alert} from "react-native";
+import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text } from "react-native";
 import { Icon } from "react-native-elements";
-import VectorIcons from "react-native-vector-icons/AntDesign";
 import CategoryItem from "../components/CategoryItem";
 import appStore from '../stores/AppStore';
 // import Create from '../screens/Create';
@@ -77,10 +76,10 @@ export default class Categories extends React.Component {
     const headerRight = (
       <TouchableOpacity
          onPress={() => navigation.navigate('Create')}>
-        <VectorIcons
+        <Icon
           name='plus'
-          size={30}
-          color={'black'}
+          type='antdesign'
+          containerStyle={{ paddingRight: 15 }}
         />
       </TouchableOpacity>
   );
