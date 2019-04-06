@@ -1,14 +1,23 @@
 import React from 'react';
 import { Alert, View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 
-const CategoryItem = ({
-    navigation,
-    categoryName,
-    image
-}) => (
-        <>
+
+
+export default class CategoryItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            categoryName: props.categoryName,
+            image: props.image
+        }
+    }
+
+    render(){
+        const {categoryName,image} = this.state;
+        return(
+            <>
             <TouchableOpacity
-                onPress={() => Alert.alert('Look at category', categoryName)}
+                onPress={() => this.props.navigation.navigate('Events')}
             >
                 <ImageBackground
                     source={{uri: image}}
@@ -27,6 +36,7 @@ const CategoryItem = ({
                 </ImageBackground>
             </TouchableOpacity>
         </>
-);
 
-export default CategoryItem;
+        )
+    }
+}

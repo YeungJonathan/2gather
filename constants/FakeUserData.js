@@ -7,7 +7,9 @@ const users = [
       { name: "java", proficiency: 2 },
       { name: "python", proficiency: 3 },
       { name: "mobile development", proficiency: 3 }
-    ]
+    ],
+    description:
+      "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru."
   }
 ];
 
