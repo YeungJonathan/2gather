@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, FlatList, TouchableOpacity} from 'react-native';
-import {fakeEventItems} from '../constants/FakeEventItems';
+// import {fakeEventItems} from '../constants/FakeEventItems';
 import { observer } from 'mobx-react';
 import EventCard from '../components/EventCard';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import appStore from '../stores/AppStore';
 
 @observer
 class EventsList extends React.Component {
@@ -33,7 +34,7 @@ class EventsList extends React.Component {
         return (
             <View style={{flex:1, height:'100%'}}>
                     <FlatList
-                        data={fakeEventItems}
+                        data={appStore.events}
                         keyExtractor={item => item.id.toString()}
                         renderItem={eventInformation => (
                             <EventCard
