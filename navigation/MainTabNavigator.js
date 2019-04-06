@@ -4,6 +4,7 @@ import UserDetails from "../screens/UserDetails";
 import UserDetailsDrawer from "../screens/UserDetailsDrawer";
 import EventsList from "../screens/EventsList";
 import EventDetails from "../screens/EventDetails";
+import Recommended from "../screens/Recommended";
 import StarredList from "../screens/StarredList";
 import Create from "../screens/Create";
 
@@ -15,13 +16,14 @@ const Authenticated = createDrawerNavigator(
 			EventsList,
 			EventDetails,
 			StarredList,
-			Create
+			Create,
+      Recommended
 		})
 	},
 	{
 		headerLayoutPreset: "left",
 		contentComponent: UserDetailsDrawer
 	}
-	);
+);
 
 export default Authenticated;

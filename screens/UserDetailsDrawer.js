@@ -58,24 +58,28 @@ const UserDetailsDrawer = ({ navigation }) => (
             }
           />
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Terms and Conditions")}
-        >
+        <TouchableOpacity onPress={() => navigation.navigate("Create")}>
           <ListItem
-            title="Terms and Condition"
+            title="Create an Event"
             subtitle=""
             leftAvatar={
-              <Icon reverse name="copyright" type="font-awesome" size={15} />
+              <Icon reverse name="plus" type="font-awesome" size={15} />
             }
           />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Login")}>
           <ListItem
             title="Logout"
-            titleStyle={{color:'red'}}
+            titleStyle={{ color: "red" }}
             subtitle=""
             leftAvatar={
-              <Icon reverse name="sign-out" type="font-awesome" size={15} color='red'/>
+              <Icon
+                reverse
+                name="sign-out"
+                type="font-awesome"
+                size={15}
+                color="red"
+              />
             }
           />
         </TouchableOpacity>
