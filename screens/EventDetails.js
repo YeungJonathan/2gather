@@ -1,16 +1,23 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Alert, Image } from 'react-native';
 import { observer } from 'mobx-react';
-import { Card } from 'react-native-material-ui';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 @observer
 class EventDetails extends React.Component {
 
     static navigationOptions = ({ navigation }) => {
-        const headerTitle = <Text style={{fontSize: 18}}>Events Details</Text>
+        const headerLeft = (
+            <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                style={{paddingLeft: 15}}
+            >
+                <Icon size={18} name='arrow-left'/>
+            </TouchableOpacity>
+        );
         return({
             title: 'Events Details',
+            headerLeft: headerLeft 
         });
     };
 
