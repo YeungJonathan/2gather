@@ -17,7 +17,6 @@ class EventDetails extends React.Component {
         );
         return({
             title: 'Events Details',
-            // headerLeft: headerLeft 
         });
     };
 
