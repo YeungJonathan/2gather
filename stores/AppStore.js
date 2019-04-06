@@ -5,6 +5,7 @@ class AppStore {
       name: "Zain",
       avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
       role: "Developer",
+      units: ["FIT3178", "FIT2081"],
       interests: [
         { name: "java", proficiency: 5 },
         { name: "python", proficiency: 5 },
@@ -12,7 +13,12 @@ class AppStore {
       ],
       description:
         "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru.",
-      previous: [5, 3, 2, 6]
+      previous: [
+        { id: 5, categoryName: "education" },
+        { id: 3, categoryName: "tech" },
+        { id: 2, categoryName: "health" },
+        { id: 6, categoryName: "others" }
+      ]
     }
   ];
   @observable events = {
