@@ -8,17 +8,16 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 @observer
 class EventsList extends React.Component {
     static navigationOptions = ({ navigation }) => {
-        const headerLeft = (
+        const headerRight = (
             <TouchableOpacity
-                onPress={() => navigation.goBack()}
-                style={{paddingLeft: 15}}
+                style={{paddingRight: 20}}
             >
-                <Icon size={18} name='arrow-left'/>
+                <Icon size={18} name='search' />
             </TouchableOpacity>
         );
         return({
             title: 'Events',
-            // headerLeft: headerLeft,
+            headerRight: headerRight,
         });
     };
 

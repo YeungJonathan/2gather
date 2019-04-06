@@ -52,7 +52,7 @@ export default class Categories extends React.Component {
             <TouchableOpacity
                 onPress={() => navigation.openDrawer()}
             >
-                <Icon name='bars' type='font-awesome' containerStyle={{ paddingLeft: 15}}/>
+                <Icon name='bars' type='font-awesome' containerStyle={{ paddingLeft: 20}}/>
             </TouchableOpacity>);
         return({
             title: 'Categories',
