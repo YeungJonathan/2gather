@@ -29,19 +29,22 @@ class StarredList extends React.Component {
     }
 
     render() {
-        const { navigation } = this.props;
+        const { navigation } = this.props,
+            keys = Object.keys(appStore.events),
+            arrays = keys.map(key => (appStore.events[key]).filter(x => x.starred));
         return (
             <View style={{flex:1, height:'100%'}}>
-                    <FlatList
-                        data={appStore.events.filter(x => x.starred)}
-                        keyExtractor={item => item.id.toString()}
-                        renderItem={eventInformation => (
-                            <EventCard
-                                navigation={navigation}
-                                eventInformation={eventInformation.item}
-                            />
-                        )}
-                    />
+                <FlatList
+                    data={[].concat.apply([], arrays)}
+                    keyExtractor={item => item.id.toString()}
+                    renderItem={(eventInformation) => (
+                        <EventCard
+                            navigation={navigation}
+                            eventInformation={eventInformation.item}
+                            categoryName={keys[eventInformation.index]}
+                        />
+                    )}
+                />
                 </View>
         );
     }

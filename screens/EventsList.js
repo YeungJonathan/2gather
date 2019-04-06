@@ -40,6 +40,7 @@ class EventsList extends React.Component {
                         <EventCard
                             navigation={navigation}
                             eventInformation={eventInformation.item}
+                            categoryName={categoryName}
                         />
                     )}
                 />
