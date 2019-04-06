@@ -31,17 +31,22 @@ class StarredList extends React.Component {
     render() {
         const { navigation } = this.props,
             keys = Object.keys(appStore.events),
-            arrays = keys.map(key => (appStore.events[key]).filter(x => x.starred));
+            arrays = [];
+        keys.forEach(key => {
+            let temp = appStore.events[key].filter(x => x.starred === true);
+            temp.forEach(item => arrays.push({a: key, b: item}))
+        });
         return (
             <View style={{flex:1, height:'100%'}}>
                 <FlatList
-                    data={[].concat.apply([], arrays)}
-                    keyExtractor={item => item.id.toString()}
-                    renderItem={(eventInformation) => (
+                    data={arrays}
+                    keyExtractor={(_, index) => index.toString()}
+                    renderItem={({item}) => (
                         <EventCard
                             navigation={navigation}
-                            eventInformation={eventInformation.item}
-                            categoryName={keys[eventInformation.index]}
+                            eventInformation={item.b}
+                            categoryName={item.a}
+                            disabled
                         />
                     )}
                 />
