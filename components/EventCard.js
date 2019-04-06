@@ -5,7 +5,7 @@ import { Card } from 'react-native-material-ui';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 @observer
-class EventDetails extends React.Component {
+class EventCard extends React.Component {
     constructor(props) {
         super(props);
         this.eventInformation = props.eventInformation;
@@ -89,4 +89,4 @@ class EventDetails extends React.Component {
     }
 }
 
-export default EventDetails;
+export default EventCard;
