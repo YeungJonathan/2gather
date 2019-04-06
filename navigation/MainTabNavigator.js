@@ -7,11 +7,11 @@ import EventDetails from "../screens/EventDetails";
 
 const Authenticated = createDrawerNavigator(
   {
-    MainStack: createStackNavigator({ 
-      Categories, 
-      UserDetails, 
+    MainStack: createStackNavigator({
+      Categories,
+      UserDetails,
       EventsList,
-      EventDetails 
+      EventDetails
     })
   },
   {

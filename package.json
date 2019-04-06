@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "expo": "^32.0.0",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
