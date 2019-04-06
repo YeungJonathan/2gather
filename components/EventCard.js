@@ -1,28 +1,31 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { observer } from 'mobx-react';
 import { Card } from 'react-native-material-ui';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import appStore from '../stores/AppStore';
 
 @observer
 class EventCard extends React.Component {
     constructor(props) {
         super(props);
         this.eventInformation = props.eventInformation;
+        this.categoryName = props.categoryName;
         this.state = {
-            title:this.eventInformation.title,
-            time:this.eventInformation.time,
-            location:this.eventInformation.location,
+            id: this.eventInformation.id,
+            title: this.eventInformation.title,
+            time: this.eventInformation.time,
+            location: this.eventInformation.location,
             going: this.eventInformation.going,
             date: this.eventInformation.date,
-            star: false
         }
+        console.log(props.categoryName)
     }
 
     render() {
-        const {title, time, date, location,star,going} = this.state;
-        const starred = star? "flex":"none";
-        const notStarred = star?"none":"flex";
+        const {id, title, time, date, location, going} = this.state,
+            { starred } = appStore.events[this.categoryName][id-1], 
+            name = starred ? "star" : "star-o";
         return (
             <View>
                 <Card>
@@ -36,24 +39,17 @@ class EventCard extends React.Component {
                         <View style={{flexDirection:'row', paddingLeft: 28}}>
                             <View style={{flexDirection:'column'}}>
                                 <TouchableOpacity 
-                                    style={{display:notStarred, paddingTop:30}}
-                                    onPress={()=>this.setState({star: !star})}
+                                    style={{paddingTop:30}}
+                                    onPress={()=> {
+                                        appStore.events[this.categoryName][id-1].starred = 
+                                        !appStore.events[this.categoryName][id-1].starred;
+                                    }}
                                 >
                                     <Icon
-                                        name={"star-o"}
+                                        name={name}
                                         size={30}
                                         color={'gold'}
                                     />
-                                </TouchableOpacity>
-                                <TouchableOpacity 
-                                    style={{display:starred, paddingTop:30}}
-                                    onPress={()=>this.setState({star: !star})}
-                                >
-                                    <Icon
-                                        name={"star"}
-                                        size={30}
-                                        color={'gold'}
-                                    /> 
                                 </TouchableOpacity>
                                 <Text style={{marginLeft:-10}}>
                                     Going: {going}
