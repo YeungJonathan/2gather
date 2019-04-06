@@ -1,10 +1,11 @@
 import { createStackNavigator } from 'react-navigation';
 import Categories from '../screens/Categories';
-// import Launch from '../screens/Launch';
+import EventsList from '../screens/EventsList'
 
 const Authenticated = createStackNavigator(
     {
     Categories: {screen: Categories},
+    Events: {screen:EventsList}
     }, 
     {
         headerLayoutPreset: 'left'

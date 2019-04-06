@@ -64,6 +64,7 @@ export default class Categories extends React.Component {
                             <CategoryItem 
                                 categoryName={item.item.categoryName} 
                                 image={item.item.image}
+                                navigation={this.props.navigation}
                             />)
                         }
                     />
