@@ -4,6 +4,7 @@ import UserDetails from "../screens/UserDetails";
 import UserDetailsDrawer from "../screens/UserDetailsDrawer";
 import EventsList from "../screens/EventsList";
 import EventDetails from "../screens/EventDetails";
+import StarredList from "../screens/StarredList";
 
 const Authenticated = createDrawerNavigator(
   {
@@ -11,7 +12,8 @@ const Authenticated = createDrawerNavigator(
       Categories,
       UserDetails,
       EventsList,
-      EventDetails
+      EventDetails,
+      StarredList
     })
   },
   {

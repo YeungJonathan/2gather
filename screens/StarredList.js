@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import appStore from '../stores/AppStore';
 
 @observer
-class EventsList extends React.Component {
+class StarredList extends React.Component {
     static navigationOptions = ({ navigation }) => {
         const headerRight = (
             <TouchableOpacity
@@ -16,7 +16,7 @@ class EventsList extends React.Component {
             </TouchableOpacity>
         );
         return({
-            title: 'Events',
+            title: 'Starred Events',
             headerRight: headerRight,
         });
     };
@@ -33,7 +33,7 @@ class EventsList extends React.Component {
         return (
             <View style={{flex:1, height:'100%'}}>
                     <FlatList
-                        data={appStore.events}
+                        data={appStore.events.filter(x => x.starred)}
                         keyExtractor={item => item.id.toString()}
                         renderItem={eventInformation => (
                             <EventCard
@@ -47,4 +47,4 @@ class EventsList extends React.Component {
     }
 }
 
-export default EventsList;
+export default StarredList;
