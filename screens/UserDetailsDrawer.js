@@ -17,12 +17,11 @@ const styles = StyleSheet.create({
     flex: 1
   },
   ListItem: {
-    paddingLeft: 10
+    // paddingTop: -20,
   }
 });
 
 const UserDetailsDrawer = ({ navigation }) => (
-<<<<<<< HEAD
   <ScrollView>
     <SafeAreaView
       style={styles.container}
@@ -32,7 +31,7 @@ const UserDetailsDrawer = ({ navigation }) => (
         user={users[0]}
         onPress={() => navigation.navigate("UserDetails")}
       />
-      <Divider style={{ backgroundColor: "grey", height: 2 }} />
+      <Divider style={{ backgroundColor: "grey", height: 1 }} />
       <View style={styles.ListItem}>
         <TouchableOpacity onPress={() => navigation.navigate("Categories")}>
           <ListItem
@@ -77,20 +76,13 @@ const UserDetailsDrawer = ({ navigation }) => (
             title="Logout"
             subtitle=""
             leftAvatar={
-              <Icon reverse name="sign-out-alt" type="font-awesome" size={15} />
+              <Icon reverse name="sign-out" type="font-awesome" size={15} />
             }
           />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   </ScrollView>
-=======
-    <ScrollView>
-        <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
-        <Profile user={users[0]} onPress={() => navigation.navigate('UserDetails')}/>
-        </SafeAreaView>
-    </ScrollView>
->>>>>>> b63160352cc2c7b4bb412cc7ab200d687f80f8ef
 );
 
 export default UserDetailsDrawer;
