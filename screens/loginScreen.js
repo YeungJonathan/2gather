@@ -5,7 +5,8 @@ import {
   Text,
   TouchableOpacity,
   TextInput,
-  ImageBackground
+  ImageBackground,
+  Image
 } from "react-native";
 import { fakeEventItems } from "../constants/FakeEventItems";
 import { observer } from "mobx-react";
@@ -37,71 +38,47 @@ class LoginScreen extends React.Component {
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <View style={{ flexDirection: "row", marginBottom: 20 }}>
-            <Text style={{ fontSize: 18, color: "white" }}>Login</Text>
-            <TextInput
-              style={{
-                width: "70%",
-                borderColor: "white",
-                color: "white",
-                marginLeft: 50,
-                borderWidth: 1
-              }}
-              placeholder="  Enter Name"
-              value={this.state.userName}
-              placeholderTextColor={"white"}
-              onChangeText={input => this.setState({ userName: input })}
-            />
-          </View>
-          <View style={{ flexDirection: "row" }}>
-            <Text style={{ fontSize: 18, color: "white" }}>Password</Text>
-            <TextInput
-              style={{
-                width: "70%",
-                borderColor: "white",
-                color: "white",
-                marginLeft: 15,
-                borderWidth: 1
-              }}
-              placeholder="  Enter Password"
-              value={this.state.password}
-              placeholderTextColor={"white"}
-              secureTextEntry
-              onChangeText={input => this.setState({ password: input })}
-            />
-          </View>
-          <TouchableOpacity
-            onPress={() =>
-              this.props.navigation.navigate("Categories", {
-                name: this.state.userName
-              })
-            }
-            style={{
-              borderColor: "#3a85ff",
-              borderWidth: 1,
-              borderRadius: 10,
-              marginTop: 20,
-              backgroundColor: "#3a85ff",
-              width: "50%",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <Text
-              style={{
-                color: "white",
-                fontSize: 18,
-                paddingBottom: 10,
-                paddingTop: 10
-              }}
-            >
-              Log In
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </ImageBackground>
-    );
-  }
+                    <Image
+                        source={require('../assets/images/logo.png')}
+                        style={{width: '50%',tintColor:'white'}}
+                    />
+                    <View style={{flexDirection:'row', marginBottom:20}}>
+                    <Text style={{fontSize: 18, color:'white'}}>
+                            Login
+                        </Text>
+                        <TextInput
+                            style={{width:'70%', borderColor:'white', color: 'white', marginLeft:50, borderWidth:1}}
+                            placeholder = "  Enter Name"
+                            value={this.state.userName}
+                            placeholderTextColor={'white'}
+                            onChangeText={input =>  this.setState({userName: input})}
+                        />
+                    </View>
+                    <View style={{flexDirection:'row'}}>
+                        <Text style={{fontSize: 18, color:'white'}}>
+                            Password
+                        </Text>
+                        <TextInput
+                            style={{width:'70%', borderColor:'white', color: 'white', marginLeft:15, borderWidth:1}}
+                            placeholder = "  Enter Password"
+                            value={this.state.password}
+                            placeholderTextColor={'white'}
+                            secureTextEntry
+                            onChangeText={input =>  this.setState({password: input})}
+                        />
+                    </View>
+                    <TouchableOpacity 
+                        onPress={() => this.props.navigation.navigate("Categories", {name: this.state.userName})}
+                        style={{borderColor:'#3a85ff', borderWidth:1, borderRadius:10, marginTop: 50, backgroundColor:'#3a85ff', width: '50%', justifyContent:'center', alignItems:'center'}}    
+                    >
+                        <Text style={{color: 'white', fontSize: 18, paddingBottom:10, paddingTop: 10}}>
+                            Log In
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+            </ImageBackground>
+        );
+    }
 }
 
 export default LoginScreen;
