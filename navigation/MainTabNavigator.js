@@ -9,8 +9,7 @@ const Authenticated = createDrawerNavigator(
   {
     Categories: createStackNavigator({ Categories }),
     UserDetails: createStackNavigator({ UserDetails }),
-    Events: createStackNavigator({ EventsList }),
-    EventDetails: createStackNavigator({ EventDetails })
+    Events: createStackNavigator({ EventsList, EventDetails }),
   },
   {
     headerLayoutPreset: "left",
