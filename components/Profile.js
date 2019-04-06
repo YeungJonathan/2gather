@@ -1,11 +1,11 @@
 import React from "react";
-import { Text, Image, View } from "react-native";
+import { Text, Image, View, TouchableOpacity } from "react-native";
 import {
   Card,
   ListItem,
 } from "react-native-elements";
 
-const Profile = ({ user }) => (
+const Profile = ({ user, onPress=()=>{null} }) => (
   <View>
     <Image
       source={{
@@ -14,15 +14,18 @@ const Profile = ({ user }) => (
       }}
       style={{ width: "100%", height: 200 }}
     />
-    <ListItem
-      leftAvatar={{
-        title: user.name[0],
-        showEditButton: true
-      }}
-      title={user.name}
-      subtitle={user.role}
-    />
-
+    <TouchableOpacity
+      onPress={() => onPress()}
+    >
+      <ListItem
+        leftAvatar={{
+          title: user.name[0],
+          showEditButton: true
+        }}
+        title={user.name}
+        subtitle={user.role}
+      />
+    </TouchableOpacity>
     <Card title="Description">
       <Text>
         Lorem Ipsum is simply dummy text of the printing and typesetting

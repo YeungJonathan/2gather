@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const UserDetailsDrawer = () => (
+const UserDetailsDrawer = ({ navigation }) => (
     <ScrollView>
         <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
-        <Profile user={users[0]} />
+        <Profile user={users[0]} onPress={() => navigation.navigate('UserDetails')} />
         </SafeAreaView>
     </ScrollView>
 );
