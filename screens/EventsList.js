@@ -26,23 +26,25 @@ class EventsList extends React.Component {
     };
   }
 
-  render() {
-    const { navigation } = this.props;
-    return (
-      <View style={{ flex: 1, height: "100%" }}>
-        <FlatList
-          data={appStore.events}
-          keyExtractor={item => item.id.toString()}
-          renderItem={eventInformation => (
-            <EventCard
-              navigation={navigation}
-              eventInformation={eventInformation.item}
-            />
-          )}
-        />
-      </View>
-    );
-  }
+    render() {
+        const { navigation } = this.props,
+            categoryName = navigation.getParam('categoryName').toLowerCase();
+        return (
+            <View style={{flex:1, height:'100%'}}>
+                <FlatList
+                    data={appStore.events[categoryName]}
+                    keyExtractor={item => item.id.toString()}
+                    renderItem={eventInformation => (
+                        <EventCard
+                            navigation={navigation}
+                            eventInformation={eventInformation.item}
+                            categoryName={categoryName}
+                        />
+                    )}
+                />
+            </View>
+        );
+    }
 }
 
 export default EventsList;
