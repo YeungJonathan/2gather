@@ -1,55 +1,77 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { toJS } from 'mobx';
+import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import { observer } from 'mobx-react';
 import { Card } from 'react-native-material-ui';
-// import { Avatar } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 @observer
 class EventCard extends React.Component {
     constructor(props) {
         super(props);
         const eventInformation = props.eventInformation;
-        console.log(eventInformation)
         this.state = {
             title:eventInformation.title,
             time:eventInformation.time,
-            location:eventInformation.location
+            location:eventInformation.location,
+            star: false
         }
     }
 
     render() {
-        const {title, time, location} = this.state;
-        console.log(title, time, location)
+        const {title, time, location,star} = this.state;
+        const starred = star? "flex":"none";
+        const notStarred = star?"none":"flex";
         return (
             <View>
-                <Card style={{width: 30}}>
+                <Card>
                     <TouchableOpacity
-                        // style={MessageCardStyle.cardContainer}
-                        // onPress={() => {
-                        //     this.handleConversation(title, lastMessageTime);
-                        // }}
+                        style={{height:100, backgroundColor:'#E2EFFD'
+                    }}
+                        onPress={() => {
+                            Alert.alert('View Event')
+                        }}
                     >
-                        <View >
-                        {/* // style={MessageCardStyle.messageCardViewStyle}> */}
-                            <View> 
-                            {/* // style={MessageCardStyle.middleCardContainer}> */}
+                        <View style={{flexDirection:'row', paddingLeft: 35}}>
+                            <TouchableOpacity 
+                                style={{display:notStarred, paddingTop:35}}
+                                onPress={()=>this.setState({star: !star})}
+                            >
+                                <Icon
+                                    name={"star-o"}
+                                    size={30}
+                                    color={'gold'}
+                                />
+                            </TouchableOpacity>
+                            <TouchableOpacity 
+                                style={{display:starred, paddingTop:35}}
+                                onPress={()=>this.setState({star: !star})}
+                            >
+                                <Icon
+                                    name={"star"}
+                                    size={30}
+                                    color={'gold'}
+                                /> 
+                            </TouchableOpacity>
+                            <View style={{flexDirection:'column', paddingLeft:50, paddingTop:20}}>
+                                <View style={{flexDirection:'row', paddingBottom:12}}>
+                                    <Text
+                                        style={{fontWeight:'bold', fontSize:20}}
+                                        ellipsizeMode="tail"
+                                        numberOfLines={1}
+                                    >
+                                        {title}
+                                    </Text>
+                                    <Text 
+                                        style={{paddingLeft: 20, fontWeight:'bold', fontSize:20}}> 
+                                        @{time}
+                                    </Text>
+                                </View>
                                 <Text
-                                    // style={MessageCardStyle.nameText}
-                                    ellipsizeMode="tail"
-                                    numberOfLines={1}
+                                    style={{fontSize:16,fontStyle:"italic"}}
                                 >
-                                    {title}
-                                </Text>
-                                <Text> 
-                                {/* // style={MessageCardStyle.timeText}> */}
-                                    {time}
+                                    {location}
                                 </Text>
                             </View>
-                            <Text >
-                            {/* style={MessageCardStyle.lastMessage}> */}
-                                {location}
-                            </Text>
                         </View>
                     </TouchableOpacity>
                 </Card>

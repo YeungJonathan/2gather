@@ -24,7 +24,6 @@ class EventsList extends React.Component {
         const { navigation } = this.props;
         return (
             <View style={{flex:1, height:'100%'}}>
-                <View style={{flex:9}}>
                     <FlatList
                         data={fakeEventItems}
                         keyExtractor={item => item.id.toString()}
@@ -36,7 +35,6 @@ class EventsList extends React.Component {
                         )}
                     />
                 </View>
-            </View>
         );
     }
 }
