@@ -7,25 +7,23 @@ import EventDetails from "../screens/EventDetails";
 import Recommended from "../screens/Recommended";
 import StarredList from "../screens/StarredList";
 import Create from "../screens/Create";
-import loginScreen from "../screens/loginScreen";
 
 const Authenticated = createDrawerNavigator(
-  {
-    MainStack: createStackNavigator({
-      loginScreen,
-      Categories,
-      UserDetails,
-      EventsList,
-      EventDetails,
-      Recommended,
-      StarredList,
-      Create
-    })
-  },
-  {
-    headerLayoutPreset: "left",
-    contentComponent: UserDetailsDrawer
-  }
+	{
+		MainStack: createStackNavigator({
+			Categories,
+			UserDetails,
+			EventsList,
+			EventDetails,
+			StarredList,
+			Create,
+      Recommended
+		})
+	},
+	{
+		headerLayoutPreset: "left",
+		contentComponent: UserDetailsDrawer
+	}
 );
 
 export default Authenticated;

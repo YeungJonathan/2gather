@@ -173,7 +173,8 @@ export default class Create extends Component{
                         backgroundColor: 'red',
                         justifyContent:'center'
                     }}
-                    onPress={()=>Alert.alert('pew pew')}
+                    // onPress={()=>Alert.alert('pew pew')}
+                    onPress={()=>this.props.navigation.goBack()}
                     >
                         <Text
                             style={{    

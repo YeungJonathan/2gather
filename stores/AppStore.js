@@ -8,8 +8,8 @@ class AppStore {
       units: ["FIT3155", "FIT2099"],
       interests: [
         { name: "java", proficiency: 5 },
-        { name: "python", proficiency: 5 },
-        { name: "mobile development", proficiency: 5 }
+        { name: "python", proficiency: 3 },
+        { name: "mobile development", proficiency: 2 }
       ],
       description:
         "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru.",

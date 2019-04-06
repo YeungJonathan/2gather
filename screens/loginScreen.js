@@ -37,7 +37,7 @@ class loginScreen extends React.Component {
                             Login
                         </Text>
                         <TextInput
-                            style={{width:'70%', borderColor:'white', marginLeft:50, borderWidth:1}}
+                            style={{width:'70%', borderColor:'white', color: 'white', marginLeft:50, borderWidth:1}}
                             placeholder = "  Enter Name"
                             value={this.state.userName}
                             placeholderTextColor={'white'}
@@ -49,10 +49,11 @@ class loginScreen extends React.Component {
                             Password
                         </Text>
                         <TextInput
-                            style={{width:'70%', borderColor:'white', marginLeft:15, borderWidth:1}}
+                            style={{width:'70%', borderColor:'white', color: 'white', marginLeft:15, borderWidth:1}}
                             placeholder = "  Enter Password"
                             value={this.state.password}
                             placeholderTextColor={'white'}
+                            secureTextEntry
                             onChangeText={input =>  this.setState({password: input})}
                         />
                     </View>

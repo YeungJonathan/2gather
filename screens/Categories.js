@@ -1,9 +1,9 @@
 import React from "react";
-import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text, Alert} from "react-native";
+import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text } from "react-native";
 import { Icon } from "react-native-elements";
-import VectorIcons from "react-native-vector-icons/AntDesign";
 import CategoryItem from "../components/CategoryItem";
 import appStore from '../stores/AppStore';
+// import Create from '../screens/Create';
 
 const categoriesList = [
   {
@@ -74,19 +74,19 @@ export default class Categories extends React.Component {
       </TouchableOpacity>
     );
     const headerRight = (
-      <TouchableOpacity 
-        onPress={() => Alert.alert('pew pew')}>
-        <VectorIcons
-          name={'plus'}
-          size={30}
-          color={'black'}
+      <TouchableOpacity
+         onPress={() => navigation.navigate('Create')}>
+        <Icon
+          name='plus'
+          type='antdesign'
+          containerStyle={{ paddingRight: 15 }}
         />
       </TouchableOpacity>
   );
     return {
-      title: "Categories",
-      headerLeft: headerLeft,
-      headerRight: headerRight
+        title: "Categories",
+        headerLeft: headerLeft,
+        headerRight: headerRight
     };
   };
 
