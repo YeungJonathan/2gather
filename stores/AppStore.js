@@ -21,7 +21,7 @@ class AppStore {
             education: [
                 {
                     id:1,
-                    title: 'Java Tutorial',
+                    title: 'FIT3155 meetup',
                     date: 'Sat 6 Apr',
                     time: '19:30',
                     location: 'Central 1 Theatre',
@@ -31,7 +31,7 @@ class AppStore {
                 },
                 {
                     id:2,
-                    title: 'Coding interview meetup',
+                    title: 'MED4200 meetup',
                     date: 'Sat 6 Apr',
                     time: '20:00',
                     location: 'Central 2 Theatre',
@@ -41,7 +41,7 @@ class AppStore {
                 },
                 {
                     id:3,
-                    title: "Computer Hacking skills",
+                    title: "LAW4112 meetup",
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 3 Theatre',
@@ -51,7 +51,7 @@ class AppStore {
                 },
                 {
                     id:4,
-                    title: 'Advanced python meetup',
+                    title: 'MBA5530 meetup',
                     time: '20:30',
                     date: 'Sat 7 Apr',
                     location: 'Central 4 Theatre',
@@ -61,7 +61,7 @@ class AppStore {
                 },
                 {
                     id:5,
-                    title: 'React Native noob meetup',
+                    title: 'ACW3041 meetup',
                     time: '21:00',
                     date: 'Sat 7 Apr',
                     location: 'Central 5 Theatre',
@@ -71,7 +71,7 @@ class AppStore {
                 },
                 {
                     id:6,
-                    title: 'React simple meetup',
+                    title: 'FIT3077 meetup',
                     time: '21:30',
                     date: 'Sat 8 Apr',
                     location: 'Central 6 Theatre',
@@ -81,7 +81,7 @@ class AppStore {
                 },
                 {
                     id:7,
-                    title: 'C++ meetup',
+                    title: 'ATS3147 meetup',
                     date: 'Sat 9 Apr',
                     time: '22:00',
                     location: 'Central 7 Theatre',
@@ -91,7 +91,7 @@ class AppStore {
                 },
                 {
                     id:8,
-                    title: 'PHP Yikes meetup',
+                    title: 'AMU1277 meetup',
                     time: '22:30',
                     date: 'Sat 10 Apr',
                     location: 'Central 8 Theatre',
@@ -101,7 +101,7 @@ class AppStore {
                 },
                 {
                     id:9,
-                    title: 'C Code meetup',
+                    title: 'GLS3215 meetup',
                     time: '23:00',
                     date: 'Sat 11 Apr',
                     location: 'Central 9 Theatre',
@@ -111,7 +111,7 @@ class AppStore {
                 },
                 {
                     id:10,
-                    title: 'Medium Ruby',
+                    title: 'DIS2906 meetup',
                     time: '23:30',
                     date: 'Sat 11 Apr',
                     location: 'Central 10 Theatre',
