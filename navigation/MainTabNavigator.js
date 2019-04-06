@@ -7,9 +7,12 @@ import EventDetails from "../screens/EventDetails";
 
 const Authenticated = createDrawerNavigator(
   {
-    Categories: createStackNavigator({ Categories }),
-    UserDetails: createStackNavigator({ UserDetails }),
-    Events: createStackNavigator({ EventsList, EventDetails }),
+    MainStack: createStackNavigator({ 
+      Categories, 
+      UserDetails, 
+      EventsList,
+      EventDetails 
+    })
   },
   {
     headerLayoutPreset: "left",
