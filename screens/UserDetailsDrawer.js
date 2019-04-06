@@ -49,7 +49,7 @@ const UserDetailsDrawer = ({ navigation }) => (
             }
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Starred")}>
+        <TouchableOpacity onPress={() => navigation.navigate("StarredList")}>
           <ListItem
             title="Starred"
             subtitle=""
