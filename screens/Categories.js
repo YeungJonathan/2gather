@@ -77,7 +77,6 @@ export default class Categories extends React.Component {
     const headerRight = (
       <TouchableOpacity
          onPress={() => navigation.navigate('Create')}>
-      >
         <VectorIcons
           name='plus'
           size={30}
