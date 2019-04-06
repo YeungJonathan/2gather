@@ -71,7 +71,7 @@ const UserDetailsDrawer = ({ navigation }) => (
             }
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => logout()}>
+        <TouchableOpacity onPress={() => navigation.navigate("Categories")}>
           <ListItem
             title="Logout"
             subtitle=""
