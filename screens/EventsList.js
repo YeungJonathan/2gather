@@ -1,15 +1,24 @@
 import React from 'react';
-import {View, FlatList, Text} from 'react-native';
+import {View, FlatList, TouchableOpacity} from 'react-native';
 import {fakeEventItems} from '../constants/FakeEventItems';
 import { observer } from 'mobx-react';
 import EventCard from '../components/EventCard';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 @observer
 class EventsList extends React.Component {
     static navigationOptions = ({ navigation }) => {
-        const headerTitle = <Text style={{fontSize: 18}}>Events</Text>
+        const headerLeft = (
+            <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                style={{paddingLeft: 15}}
+            >
+                <Icon size={18} name='arrow-left'/>
+            </TouchableOpacity>
+        );
         return({
             title: 'Events',
+            // headerLeft: headerLeft,
         });
     };
 
