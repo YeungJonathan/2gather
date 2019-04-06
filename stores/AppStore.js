@@ -44,7 +44,7 @@ class AppStore {
                     title: "LAW4112 meetup",
                     time: '20:30',
                     date: 'Sat 7 Apr',
-                    location: 'Central 3 Theatre',
+                    location: '212',
                     going: 43,
                     skills:[{skill:"C", rank:4}],
                     starred: false
@@ -54,7 +54,7 @@ class AppStore {
                     title: 'MBA5530 meetup',
                     time: '20:30',
                     date: 'Sat 7 Apr',
-                    location: 'Central 4 Theatre',
+                    location: '347',
                     going: 4,
                     skills:[{skill:"Python", rank:5}],
                     starred: false
@@ -94,7 +94,7 @@ class AppStore {
                     title: 'AMU1277 meetup',
                     time: '22:30',
                     date: 'Sat 10 Apr',
-                    location: 'Central 8 Theatre',
+                    location: 'EH4',
                     going: 25,
                     skills:[{skill:"PHP", rank:2}],
                     starred: false
@@ -104,7 +104,7 @@ class AppStore {
                     title: 'GLS3215 meetup',
                     time: '23:00',
                     date: 'Sat 11 Apr',
-                    location: 'Central 9 Theatre',
+                    location: 'D12',
                     going: 54,
                     skills:[{skill:"C", rank:3}],
                     starred: false
@@ -126,7 +126,7 @@ class AppStore {
                     title: 'Golf',
                     date: 'Sat 6 Apr',
                     time: '19:30',
-                    location: 'Central 1 Theatre',
+                    location: 'G57',
                     going: 30,
                     skills:[{skill:"java", rank:1}],
                     starred: false
@@ -166,7 +166,7 @@ class AppStore {
                     title: 'Swimming',
                     time: '21:00',
                     date: 'Sat 7 Apr',
-                    location: 'Central 5 Theatre',
+                    location: 'H8',
                     going: 29,
                     skills:[{skill:"React Native", rank:1},{skill:"JS", rank:1}],
                     starred: false
@@ -176,7 +176,7 @@ class AppStore {
                     title: 'Horseback riding',
                     time: '21:30',
                     date: 'Sat 8 Apr',
-                    location: 'Central 6 Theatre',
+                    location: 'S2',
                     going: 72,
                     skills:[{skill:"React", rank:1}, {skill:"JS", rank:1}],
                     starred: false
@@ -238,7 +238,7 @@ class AppStore {
                     title: 'Entrepreneurial Skills',
                     date: 'Sat 6 Apr',
                     time: '20:00',
-                    location: 'Central 2 Theatre',
+                    location: '142',
                     going: 35,
                     skills:[{skill:"Programming", rank:4}],
                     starred: false
@@ -248,7 +248,7 @@ class AppStore {
                     title: "Startup ideas",
                     time: '20:30',
                     date: 'Sat 7 Apr',
-                    location: 'Central 3 Theatre',
+                    location: '212',
                     going: 43,
                     skills:[{skill:"C", rank:4}],
                     starred: false
@@ -288,7 +288,7 @@ class AppStore {
                     title: 'HR management',
                     date: 'Sat 9 Apr',
                     time: '22:00',
-                    location: 'Central 7 Theatre',
+                    location: 'S7',
                     going: 65,
                     skills:[{skill:"C++", rank:3}],
                     starred: false
@@ -298,7 +298,7 @@ class AppStore {
                     title: 'TED Talk by Tim Appple',
                     time: '22:30',
                     date: 'Sat 10 Apr',
-                    location: 'Central 8 Theatre',
+                    location: 'EH4',
                     going: 25,
                     skills:[{skill:"PHP", rank:2}],
                     starred: false
@@ -360,7 +360,7 @@ class AppStore {
                     title: 'Alcoholics Anonymous',
                     time: '20:30',
                     date: 'Sat 7 Apr',
-                    location: 'Central 4 Theatre',
+                    location: '347',
                     going: 4,
                     skills:[{skill:"Python", rank:5}],
                     starred: false
@@ -370,7 +370,7 @@ class AppStore {
                     title: 'Cancer survivors',
                     time: '21:00',
                     date: 'Sat 7 Apr',
-                    location: 'Central 5 Theatre',
+                    location: 'H8',
                     going: 29,
                     skills:[{skill:"React Native", rank:1},{skill:"JS", rank:1}],
                     starred: false
@@ -420,7 +420,7 @@ class AppStore {
                     title: 'Trashbag Challenge',
                     time: '23:30',
                     date: 'Sat 11 Apr',
-                    location: 'Central 10 Theatre',
+                    location: 'MD3',
                     going: 13,
                     skills:[{skill:"Ruby", rank:3}],
                     starred: false
@@ -432,7 +432,7 @@ class AppStore {
                     title: 'Java Tutorial',
                     date: 'Sat 6 Apr',
                     time: '19:30',
-                    location: 'Central 1 Theatre',
+                    location: 'G57',
                     going: 30,
                     skills:[{skill:"java", rank:1}],
                     starred: false
@@ -442,7 +442,7 @@ class AppStore {
                     title: 'Coding interview meetup',
                     date: 'Sat 6 Apr',
                     time: '20:00',
-                    location: 'Central 2 Theatre',
+                    location: '142',
                     going: 35,
                     skills:[{skill:"Programming", rank:4}],
                     starred: false
@@ -482,7 +482,7 @@ class AppStore {
                     title: 'React simple meetup',
                     time: '21:30',
                     date: 'Sat 8 Apr',
-                    location: 'Central 6 Theatre',
+                    location: 'S2',
                     going: 72,
                     skills:[{skill:"React", rank:1}, {skill:"JS", rank:1}],
                     starred: false
@@ -492,7 +492,7 @@ class AppStore {
                     title: 'C++ meetup',
                     date: 'Sat 9 Apr',
                     time: '22:00',
-                    location: 'Central 7 Theatre',
+                    location: 'S7',
                     going: 65,
                     skills:[{skill:"C++", rank:3}],
                     starred: false
@@ -512,7 +512,7 @@ class AppStore {
                     title: 'C Code meetup',
                     time: '23:00',
                     date: 'Sat 11 Apr',
-                    location: 'Central 9 Theatre',
+                    location: 'D12',
                     going: 54,
                     skills:[{skill:"C", rank:3}],
                     starred: false
@@ -522,7 +522,7 @@ class AppStore {
                     title: 'Medium Ruby',
                     time: '23:30',
                     date: 'Sat 11 Apr',
-                    location: 'Central 10 Theatre',
+                    location: 'MD3',
                     going: 13,
                     skills:[{skill:"Ruby", rank:3}],
                     starred: false
