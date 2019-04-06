@@ -7,7 +7,6 @@ import EventsList from "../screens/EventsList";
 import EventDetails from "../screens/EventDetails";
 import StarredList from "../screens/StarredList";
 import Create from "../screens/Create";
-
 const Authenticated = createDrawerNavigator(
   {
     MainStack: createStackNavigator({
