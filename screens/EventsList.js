@@ -26,6 +26,7 @@ class EventsList extends React.Component {
     };
   }
 
+<<<<<<< HEAD
   render() {
     const { navigation } = this.props;
     return (
@@ -43,6 +44,27 @@ class EventsList extends React.Component {
       </View>
     );
   }
+=======
+    render() {
+        const { navigation } = this.props,
+            categoryName = navigation.getParam('categoryName').toLowerCase();
+        return (
+            <View style={{flex:1, height:'100%'}}>
+                <FlatList
+                    data={appStore.events[categoryName]}
+                    keyExtractor={item => item.id.toString()}
+                    renderItem={eventInformation => (
+                        <EventCard
+                            navigation={navigation}
+                            eventInformation={eventInformation.item}
+                            categoryName={categoryName}
+                        />
+                    )}
+                />
+            </View>
+        );
+    }
+>>>>>>> 08aa9febf2729685f22ec7c44f873594a74bd991
 }
 
 export default EventsList;
