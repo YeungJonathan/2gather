@@ -11,13 +11,14 @@ import loginScreen from "../screens/loginScreen";
 const Authenticated = createDrawerNavigator(
 	{
 		MainStack: createStackNavigator({
+			Create,
 			loginScreen,
 			Categories,
 			UserDetails,
 			EventsList,
 			EventDetails,
 			StarredList,
-			Create
+			// Create
 		})
 	},
 	{
