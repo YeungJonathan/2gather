@@ -5,7 +5,7 @@ class AppStore {
       name: "Zain",
       avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
       role: "Developer",
-      units: ["FIT3178", "FIT2081"],
+      units: [],
       interests: [
         { name: "java", proficiency: 5 },
         { name: "python", proficiency: 5 },
