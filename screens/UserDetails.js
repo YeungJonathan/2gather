@@ -14,7 +14,7 @@ export default class UserDetails extends React.Component {
   render() {
     return (
       <ScrollView style={{ flex: 1, height: "100%" }}>
-        <Profile user={users[0]} />
+        <Profile user={users[0]} disabled/>
         <UserDescription description={users[0].description} />
         <Interests user={users[0]} />
       </ScrollView>
