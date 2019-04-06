@@ -23,7 +23,6 @@ class EventCard extends React.Component {
         const {id, title, time, location, going} = this.state,
             { starred } = appStore.events[id-1], 
             name = starred ? "star" : "star-o";
-        console.log('Starred', starred)
         return (
             <View>
                 <Card>
@@ -38,7 +37,6 @@ class EventCard extends React.Component {
                             <TouchableOpacity 
                                 style={{paddingTop:35}}
                                 onPress={()=> {
-                                    console.log('ID', id)
                                     appStore.events[id-1].starred = !appStore.events[id-1].starred;
                                 }}
                             >
