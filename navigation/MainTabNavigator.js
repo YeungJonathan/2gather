@@ -1,8 +1,8 @@
-import { createStackNavigator } from 'react-navigation';
-import HomeScreen from '../screens/HomeScreen';
+import { createStackNavigator } from "react-navigation";
+import UserDetails from "../screens/UserDetails";
 
 const Authenticated = createStackNavigator({
-    Home: HomeScreen
-})
+  UserDetails
+});
 
 export default Authenticated;
