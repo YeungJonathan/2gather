@@ -98,13 +98,7 @@ export default class Categories extends React.Component {
                 onPress={() => {
                     console.log(fakeEventItems.length)
                     const random = getRandomInt(fakeEventItems.length),
-                        eventInformation = {
-                            id: fakeEventItems[random].id,
-                            title: fakeEventItems[random].title,
-                            time: fakeEventItems[random].time,
-                            location: fakeEventItems[random].location,
-                            going: fakeEventItems[random].going
-                        };
+                        eventInformation = fakeEventItems[random];
                     console.log('HALB', random);
                     console.log('BLAH', eventInformation)
                     navigation.navigate('EventDetails', eventInformation);
