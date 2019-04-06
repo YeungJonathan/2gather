@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "expo": "^32.0.0",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
@@ -23,6 +24,7 @@
     "react-native-material-ui": "^1.30.1",
     "react-native-modal-datetime-picker": "^6.1.0",
     "react-native-picker-select": "^6.1.0",
+    "react-native-ratings": "^6.3.1",
     "react-native-vector-icons": "^6.4.2",
     "react-navigation": "^3.0.9"
   },
