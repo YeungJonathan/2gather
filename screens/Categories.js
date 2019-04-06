@@ -2,7 +2,7 @@ import React from "react";
 import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text } from "react-native";
 import { Icon } from "react-native-elements";
 import CategoryItem from "../components/CategoryItem";
-import {fakeEventItems} from '../constants/FakeEventItems';
+import appStore from '../stores/AppStore';
 
 const categoriesList = [
   {
@@ -96,8 +96,11 @@ export default class Categories extends React.Component {
           />
           <TouchableOpacity
                 onPress={() => {
-                    const random = getRandomInt(fakeEventItems.length),
-                        eventInformation = fakeEventItems[random];
+                    const keys = Object.keys(appStore.events),
+                      random1 = getRandomInt(keys.length),
+                      eventList = appStore.events[keys[random1]],
+                      random2 = getRandomInt(eventList.length),
+                      eventInformation = eventList[random2];
                     navigation.navigate('EventDetails', eventInformation);
                 }}
             >
