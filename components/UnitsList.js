@@ -6,13 +6,17 @@ const UnitsList = ({ units }) => (
   <FlatList
     data={units}
     keyExtractor={(_, index) => index.toString()}
-    renderItem={({ item }) => 
-    <TouchableOpacity
-      onPress={() => Linking.openURL('http://www.monash.edu.au/pubs/handbooks/units/' + item + '.html')}
-    >
-      <ListItem title={item} chevron />
-    </TouchableOpacity>
-    }
+    renderItem={({ item }) => (
+      <TouchableOpacity
+        onPress={() =>
+          Linking.openURL(
+            "http://www.monash.edu.au/pubs/handbooks/units/" + item + ".html"
+          )
+        }
+      >
+        <ListItem title={item} chevron />
+      </TouchableOpacity>
+    )}
   />
 );
 
