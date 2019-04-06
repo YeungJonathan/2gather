@@ -6,6 +6,11 @@ import UserDescription from "../components/UserDescription";
 import users from "../constants/FakeUserData";
 
 export default class UserDetails extends React.Component {
+  static navigationOptions = () => {
+    return {
+      header: null
+    }
+  }
   render() {
     return (
       <ScrollView style={{ flex: 1, height: "100%" }}>
