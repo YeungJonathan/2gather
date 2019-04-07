@@ -33,7 +33,7 @@ class EventCard extends React.Component {
                         style={{height:100, backgroundColor:'#E2EFFD'
                     }}
                         onPress={() => 
-                            this.props.navigation.navigate('EventDetails', this.eventInformation)
+                            this.props.navigation.navigate('EventDetails', {...this.eventInformation, categoryName: this.categoryName})
                         }
                     >
                         <View style={{flexDirection:'row', paddingLeft: 28}}>
