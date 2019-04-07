@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   FlatList
 } from "react-native";
-import { toJS } from "mobx";
+import { toJS, action } from "mobx";
 import { observer } from "mobx-react";
 import Profile from "../components/Profile";
 import UserDescription from "../components/UserDescription";
@@ -23,22 +23,40 @@ export default class UserDetails extends React.Component {
       header: null
     };
   };
+  updateUserDescription = () => {
+    appStore.users[0].description = this.state.description;
+  };
 
   constructor() {
     super();
     this.state = {
       overlayVisible: false,
-      addingUnitCode: ""
+      overlayDescription: false,
+      addingUnitCode: "",
+      description: appStore.users[0].description
     };
   }
 
   render() {
     const interests = appStore.users[0].interests,
-      { overlayVisible, addingUnitCode } = this.state;
+      {
+        overlayVisible,
+        addingUnitCode,
+        overlayDescription,
+        description
+      } = this.state;
     return (
       <ScrollView style={{ flex: 1, height: "100%" }}>
         <Profile user={appStore.users[0]} disabled />
-        <UserDescription description={appStore.users[0].description} />
+        <TouchableOpacity
+          onPress={() =>
+            this.setState({
+              overlayDescription: true
+            })
+          }
+        >
+          <UserDescription description={this.state.description} />
+        </TouchableOpacity>
         <Card title="Interests">
           <FlatList
             data={interests}
@@ -103,6 +121,44 @@ export default class UserDetails extends React.Component {
                   if (addingUnitCode !== "")
                     appStore.users[0].units.push(addingUnitCode);
                   this.setState({ overlayVisible: false, addingUnitCode: "" });
+                }}
+              >
+                <Text>Submit</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Overlay>
+        <Overlay isVisible={overlayDescription} height={300}>
+          <View style={{ flex: 1 }}>
+            <TextInput
+              placeholder="Edit Description here"
+              value={description}
+              onChangeText={text => this.setState({ description: text })}
+              multiline={true}
+              style={{ height: 200, flexDirection: "row" }}
+            />
+
+            <View
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                justifyContent: "space-around"
+              }}
+            >
+              <TouchableOpacity
+                onPress={() => {
+                  this.setState({ overlayVisible: false, addingUnitCode: "" });
+                }}
+              >
+                <Text>Cancel</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  if (description !== "") this.updateUserDescription();
+                  this.setState({
+                    overlayDescription: false,
+                    addingUnitCode: ""
+                  });
                 }}
               >
                 <Text>Submit</Text>
