@@ -575,7 +575,7 @@ class AppStore {
       },
       {
         id: 5,
-        title: "Blank Canvas and evrything in between",
+        title: "Blank Canvas and everything between",
         time: "21:00",
         date: "Sat 7 Apr",
         location: "Central 5 Theatre",
@@ -598,7 +598,7 @@ class AppStore {
       },
       {
         id: 7,
-        title: "No one knows anything, and other lies to tell yourself",
+        title: "No one knows anything meetup",
         date: "Sat 9 Apr",
         time: "22:00",
         location: "Central 7 Theatre",
@@ -778,7 +778,7 @@ class AppStore {
       },
       {
         id: 4,
-        title: "Friends in a cirlce",
+        title: "Friends in a circle",
         time: "20:30",
         date: "Sat 7 Apr",
         location: "Central 4 Theatre",
