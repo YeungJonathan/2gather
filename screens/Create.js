@@ -172,7 +172,7 @@ export default class Create extends Component{
                     }}
                     onPress={()=> {
                         appStore.events[this.state.categoryName.toLowerCase()].push({
-                            id: appStore.events[this.state.categoryName.toLowerCase()].length,
+                            id: appStore.events[this.state.categoryName.toLowerCase()].length + 1,
                             title: this.state.sessionName,
                             time: this.state.time,
                             date: this.state.date,

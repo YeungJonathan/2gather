@@ -4,15 +4,15 @@ class AppStore {
     {
       name: "Jane Smith",
       avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      role: "Developer",
-      units: ["FIT3155", "FIT2099"],
+      role: "3rd Year Computer Science Student",
+      units: ["FIT3155", "FIT2099", "FIT3161", "FIT3178"],
       interests: [
-        { name: "java", proficiency: 5 },
-        { name: "python", proficiency: 3 },
-        { name: "mobile development", proficiency: 2 }
+        { name: "Java", proficiency: 5 },
+        { name: "Python", proficiency: 3 },
+        { name: "Mobile development", proficiency: 2 }
       ],
       description:
-        "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru.",
+        'Tech geek, Internet practitioner, Alcohol trailblazer.\nLoves new tech, vim > nano. \nCall me maybe.',
       previous: [
         { id: 5, categoryName: "education" },
         { id: 3, categoryName: "tech" },
@@ -575,7 +575,7 @@ class AppStore {
       },
       {
         id: 5,
-        title: "Blank Canvas and evrything in between",
+        title: "Blank Canvas and everything between",
         time: "21:00",
         date: "Sat 7 Apr",
         location: "Central 5 Theatre",
@@ -598,7 +598,7 @@ class AppStore {
       },
       {
         id: 7,
-        title: "No one knows anything, and other lies to tell yourself",
+        title: "No one knows anything meetup",
         date: "Sat 9 Apr",
         time: "22:00",
         location: "Central 7 Theatre",
@@ -778,7 +778,7 @@ class AppStore {
       },
       {
         id: 4,
-        title: "Friends in a cirlce",
+        title: "Friends in a circle",
         time: "20:30",
         date: "Sat 7 Apr",
         location: "Central 4 Theatre",
