@@ -91,9 +91,9 @@ export default class Categories extends React.Component {
       </TouchableOpacity>
     );
     return {
-      title: "Categories",
-      headerLeft: headerLeft,
-      headerRight: headerRight
+        title: "2Gather",
+        headerLeft: headerLeft,
+        headerRight: headerRight
     };
   };
 

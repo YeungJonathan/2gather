@@ -10,7 +10,7 @@ import { toJS } from "mobx";
 class Recommended extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      title: "Recommendation: Education"
+      title: "Recommendation: Tech"
     };
   };
   render() {
@@ -20,22 +20,22 @@ class Recommended extends React.Component {
     historyCategories = history.map(item => item.categoryName);
     historyItems = history.map(item => item.id);
 
-    let educationFilter = appStore.events["education"].filter(
-      event => event.id != 6
+    let educationFilter = appStore.events["tech"].filter(
+      event => event.id != 3
     );
     const recommend = {};
-    recommend["education"] = educationFilter;
+    recommend["tech"] = educationFilter;
 
     return (
       <ScrollView>
         <FlatList
-          data={[].concat.apply([], recommend["education"])}
+          data={[].concat.apply([], recommend["tech"])}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <EventCard
               navigation={navigation}
               eventInformation={item}
-              categoryName={"education"}
+              categoryName={"tech"}
             />
           )}
         />

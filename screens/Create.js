@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import {Text, TextInput, View, StyleSheet, Alert, AppRegistry, ImageBackground, TouchableOpacity} from 'react-native';
+import {Text, TextInput, View, StyleSheet, Alert, AppRegistry, TouchableOpacity} from 'react-native';
 import { Dropdown } from 'react-native-material-dropdown';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import DateTimePicker from 'react-native-modal-datetime-picker';
+import appStore from '../stores/AppStore';
+import { format } from 'date-fns';
 
 const styles = StyleSheet.create({
     bigBlack: {
@@ -26,7 +28,11 @@ export default class Create extends Component{
     _hideDateTimePicker = () => this.setState({ isDateTimePickerVisible: false });
 
     _handleDatePicked = (datetime) => {
-        this.setState({date:datetime})
+        const date = new Date(datetime);
+        this.setState({
+            date: format(date, 'dd MMM'), 
+            time: format(date, 'HH:mm a')
+        })
         this._hideDateTimePicker();
     };
 
@@ -35,24 +41,14 @@ export default class Create extends Component{
         this.state = {
             sessionName: props.name,
             ExpectedSkills: props.name,
-            text: '',
+            categoryName: '',
             isDateTimePickerVisible: false,
-            date:''        
+            date:'',
+            location: ''
         };
     }
 
-    getDisplayTime(date){
-        if (date==''){
-            return 'Select Meet-up Date&Time'
-        }
-        const displayTime = new Date(date);
-        const day = displayTime.getDate();
-        const month = displayTime.getMonth()+1;
-        const year = displayTime.getFullYear();
-        return day + '/' + month +'/'+ year
-    }
-
-    render(){
+    render() {
         let data = [{
             value: 'Education',
         },{
@@ -74,9 +70,7 @@ export default class Create extends Component{
         },{
             value: 'Others',
         }];
-        let uri= 'https://i.pinimg.com/564x/61/ed/e8/61ede8bf40bb73901184253fd08d3cfa.jpg';
-        const {text,date} = this.state;
-        const displayTime = date===''?"Click to choose the date":this.getDisplayTime(date);
+        const {text, date, time} = this.state;
         return(
             <KeyboardAwareScrollView>
                 {/* <ImageBackground
@@ -96,7 +90,7 @@ export default class Create extends Component{
                             style = {{marginTop:10, borderBottomWidth: 1, borderBottomColor:'grey', width:"100%", color:'black'}}
                             placeholder = "Type here to Enter the name!"
                             value={text}
-                            onChangeText={text =>  this.setState({text: text})}
+                            onChangeText={text =>  this.setState({sessionName: text})}
                         />
 
                         <Text 
@@ -106,10 +100,17 @@ export default class Create extends Component{
                         </Text>
                         <TouchableOpacity
                             style={{marginTop: 20}}
-                            onPress={this._showDateTimePicker}>
-                            <Text>
-                                {displayTime}
-                            </Text>
+                            onPress={this._showDateTimePicker}
+                        >
+                            {(date !== '' && time !== '') 
+                            ?   <Text>
+                                    {date} {time}
+                                </Text>
+                            :
+                                <Text>
+                                    Select meet up date and time
+                                </Text>
+                            }
                         </TouchableOpacity>
                         <DateTimePicker
                             isVisible={this.state.isDateTimePickerVisible}
@@ -126,6 +127,7 @@ export default class Create extends Component{
                         </Text>
                         <Dropdown
                             style={{width:'100%'}}
+                            onChangeText={(value) => this.setState({categoryName: value})}
                             label = 'Choose your category'
                             data = {data}
                             containerStyle={{width:'100%'}}
@@ -152,13 +154,8 @@ export default class Create extends Component{
                         <TextInput
                             style = {{marginTop:10, borderBottomWidth: 1, borderBottomColor:'grey', width:"100%", color:'black'}}
                             placeholder = "  Enter Meetup Location"
+                            onChangeText={(text) => this.setState({location: text})}
                         />
-                    {/* </View> */}
-
-                    {/* <View style = {{flex:1, flexDirection: 'column', justifyContent: 'space-between', marginTop:15,borderBottomWidth: 1, borderBottomColor:'grey', minimumDate: '2'}}> */}
-
-                        {/* <View style={{ flex: 1, marginTop:15 }}> */}
-                        {/* </View> */}
                     </View>
 
                     <TouchableOpacity style={{
@@ -173,8 +170,23 @@ export default class Create extends Component{
                         backgroundColor: 'red',
                         justifyContent:'center'
                     }}
-                    // onPress={()=>Alert.alert('pew pew')}
-                    onPress={()=>this.props.navigation.goBack()}
+                    onPress={()=> {
+                        appStore.events[this.state.categoryName.toLowerCase()].push({
+                            id: appStore.events[this.state.categoryName.toLowerCase()].length,
+                            title: this.state.sessionName,
+                            time: this.state.time,
+                            date: this.state.date,
+                            location: this.state.location,
+                            going: 1,
+                            skills: [
+                                { skill: "React Cognitive Skills", rank: 1 },
+                                { skill: "JS", rank: 1 }
+                            ],
+                            starred: false
+                        })
+                        Alert.alert('Success!', 'Your meetup has been created.');
+                        this.props.navigation.goBack();
+                    }}
                     >
                         <Text
                             style={{    
