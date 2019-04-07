@@ -2,7 +2,7 @@ import { observable } from "mobx";
 class AppStore {
   @observable users = [
     {
-      name: "Zain",
+      name: "Jane Smith",
       avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
       role: "Developer",
       units: ["FIT3155", "FIT2099"],

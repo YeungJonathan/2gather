@@ -1,8 +1,16 @@
 import React from "react";
-import { ScrollView, View, FlatList, TouchableOpacity, ImageBackground, Text } from "react-native";
+import {
+  ScrollView,
+  View,
+  FlatList,
+  TouchableOpacity,
+  ImageBackground,
+  Text,
+  Button
+} from "react-native";
 import { Icon } from "react-native-elements";
 import CategoryItem from "../components/CategoryItem";
-import appStore from '../stores/AppStore';
+import appStore from "../stores/AppStore";
 // import Create from '../screens/Create';
 
 const categoriesList = [
@@ -59,7 +67,7 @@ const categoriesList = [
 ];
 
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
 export default class Categories extends React.Component {
@@ -74,29 +82,27 @@ export default class Categories extends React.Component {
       </TouchableOpacity>
     );
     const headerRight = (
-      <TouchableOpacity
-         onPress={() => navigation.navigate('Create')}>
+      <TouchableOpacity onPress={() => navigation.navigate("Create")}>
         <Icon
-          name='plus'
-          type='antdesign'
+          name="plus"
+          type="antdesign"
           containerStyle={{ paddingRight: 15 }}
         />
       </TouchableOpacity>
-  );
+    );
     return {
-        title: "Categories",
-        headerLeft: headerLeft,
-        headerRight: headerRight
+      title: "Categories",
+      headerLeft: headerLeft,
+      headerRight: headerRight
     };
   };
 
   render() {
-      const {navigation} = this.props;
+    const { navigation } = this.props;
     return (
-
       <View style={{ flex: 1, height: "100%" }}>
         <ScrollView style={{ flex: 9 }}>
-                <FlatList
+          <FlatList
             data={categoriesList}
             keyExtractor={(_, index) => index.toString()}
             renderItem={item => (
@@ -108,31 +114,36 @@ export default class Categories extends React.Component {
             )}
           />
           <TouchableOpacity
-                onPress={() => {
-                    const keys = Object.keys(appStore.events),
-                      random1 = getRandomInt(keys.length),
-                      eventList = appStore.events[keys[random1]],
-                      random2 = getRandomInt(eventList.length),
-                      eventInformation = eventList[random2];
-                    navigation.navigate('EventDetails', eventInformation);
-                }}
+            onPress={() => {
+              const keys = Object.keys(appStore.events),
+                random1 = getRandomInt(keys.length),
+                eventList = appStore.events[keys[random1]],
+                random2 = getRandomInt(eventList.length),
+                eventInformation = eventList[random2];
+              navigation.navigate("EventDetails", eventInformation);
+            }}
+          >
+            <ImageBackground
+              source={{
+                uri:
+                  "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+              }}
+              style={{ height: 100, width: "100%" }}
             >
-                <ImageBackground
-                    source={{uri: 'https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'}}
-                    style={{height: 100, width: '100%'}}
-                >
-                    <Text style={{color: 'white', 
-                        fontSize: 24, 
-                        marginTop: 40, 
-                        marginLeft: 10, 
-                        textShadowOffset: {width: 2, height: 1},
-                        textShadowColor: 'grey'
-                        }}
-                    >
-                        Feeling Lucky?
-                    </Text>
-                </ImageBackground>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 24,
+                  marginTop: 40,
+                  marginLeft: 10,
+                  textShadowOffset: { width: 2, height: 1 },
+                  textShadowColor: "grey"
+                }}
+              >
+                Feeling Lucky?
+              </Text>
+            </ImageBackground>
+          </TouchableOpacity>
         </ScrollView>
       </View>
     );
