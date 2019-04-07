@@ -20,6 +20,7 @@
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-elements": "^1.1.0",
+    "react-native-flash-message": "^0.1.11",
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-material-dropdown": "^0.11.1",
     "react-native-material-ui": "^1.30.1",
