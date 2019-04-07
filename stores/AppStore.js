@@ -4,15 +4,15 @@ class AppStore {
     {
       name: "Jane Smith",
       avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-      role: "Developer",
-      units: ["FIT3155", "FIT2099"],
+      role: "3rd Year Computer Science Student",
+      units: ["FIT3155", "FIT2099", "FIT3161", "FIT3178"],
       interests: [
-        { name: "java", proficiency: 5 },
-        { name: "python", proficiency: 3 },
-        { name: "mobile development", proficiency: 2 }
+        { name: "Java", proficiency: 5 },
+        { name: "Python", proficiency: 3 },
+        { name: "Mobile development", proficiency: 2 }
       ],
       description:
-        "Lifelong food geek. Certified reader. Zombie fanatic. Internet practitioner. Alcohol trailblazer. Travel guru.",
+        'Tech geek, Internet practitioner, Alcohol trailblazer.\nLoves new tech, vim > nano. \nCall me maybe.',
       previous: [
         { id: 5, categoryName: "education" },
         { id: 3, categoryName: "tech" },
