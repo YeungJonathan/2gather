@@ -44,10 +44,10 @@ class LoginScreen extends React.Component {
                     />
                     <View style={{flexDirection:'row', marginBottom:20}}>
                     <Text style={{fontSize: 18, color:'white'}}>
-                            Login
+                            Username
                         </Text>
                         <TextInput
-                            style={{width:'70%', borderColor:'white', color: 'white', marginLeft:50, borderWidth:1}}
+                            style={{width:'70%', borderColor:'white', color: 'white', marginLeft:14, borderWidth:1}}
                             placeholder = "  Enter Name"
                             value={this.state.userName}
                             placeholderTextColor={'white'}
