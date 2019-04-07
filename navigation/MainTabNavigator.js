@@ -7,10 +7,12 @@ import EventDetails from "../screens/EventDetails";
 import Recommended from "../screens/Recommended";
 import StarredList from "../screens/StarredList";
 import Create from "../screens/Create";
+import LoginScreen from "../screens/LoginScreen";
 
 const Authenticated = createDrawerNavigator(
 	{
 		MainStack: createStackNavigator({
+			LoginScreen,
 			Categories,
 			UserDetails,
 			EventsList,
