@@ -21,6 +21,10 @@ const Profile = ({
       <ListItem
         leftAvatar={{
           title: user.name[0],
+          source: {
+            uri:
+              "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+          },
           showEditButton: true
         }}
         title={user.name}

@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Alert, Image, ScrollView, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView, FlatList, Alert } from 'react-native';
 import { observer } from 'mobx-react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Rating } from 'react-native-ratings';
 import SkillsRequired from './SkillsRequired';
+import appStore from '../stores/AppStore';
 
 @observer
 class EventDetails extends React.Component {
@@ -25,17 +26,19 @@ class EventDetails extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id:props.navigation.getParam('id', null),
             title:props.navigation.getParam('title', null),
             time:props.navigation.getParam('time', null),
             date:props.navigation.getParam('date', null),
             location:props.navigation.getParam('location', null),
             going: props.navigation.getParam('going', null),
             skills: props.navigation.getParam('skills', null),
+            categoryName: props.navigation.getParam('categoryName', null),
         }
     }
 
     render() {
-        const {date,title, time, location, going, skills} = this.state;
+        const {date, title, time, location, going, skills} = this.state;
         return (
             <ScrollView>
                 <Image
@@ -105,7 +108,11 @@ class EventDetails extends React.Component {
 
                 <TouchableOpacity 
                     style={{marginTop: 30, marginBottom: 30, alignItems:'center', borderWidth:1, marginLeft: '25%', marginRight:'25%', borderRadius:18}}
-                    onPress={()=>Alert.alert('pew pew')}    
+                    onPress={()=>{
+                        appStore.events[this.state.categoryName][this.state.id - 1].going += 1;
+                        Alert.alert('Success!', 'You\'re now attending ' + title);
+                        this.props.navigation.goBack();
+                    }}    
                 >
                     <Text style={{fontSize:25, marginTop: 10, marginBottom: 13}}>
                         Join 

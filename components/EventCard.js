@@ -11,6 +11,7 @@ class EventCard extends React.Component {
         super(props);
         this.eventInformation = props.eventInformation;
         this.categoryName = props.categoryName;
+        this.disabled = props.disabled ? props.disabled : false;
         this.state = {
             id: this.eventInformation.id,
             title: this.eventInformation.title,
@@ -32,12 +33,13 @@ class EventCard extends React.Component {
                         style={{height:100, backgroundColor:'#E2EFFD'
                     }}
                         onPress={() => 
-                            this.props.navigation.navigate('EventDetails', this.eventInformation)
+                            this.props.navigation.navigate('EventDetails', {...this.eventInformation, categoryName: this.categoryName})
                         }
                     >
                         <View style={{flexDirection:'row', paddingLeft: 28}}>
                             <View style={{flexDirection:'column'}}>
                                 <TouchableOpacity 
+                                    disabled={this.disabled}
                                     style={{paddingTop:30}}
                                     onPress={()=> {
                                         appStore.events[this.categoryName][id-1].starred = 
