@@ -1,5 +1,6 @@
 # 2gather
 🤗👦👦🏽👧🏻👪
+
 2gather - a solution to meetups for students.
 
 We made this project in 24 hours in Hackamon 2018.
