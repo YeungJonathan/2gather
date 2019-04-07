@@ -110,7 +110,7 @@ class EventDetails extends React.Component {
                     style={{marginTop: 30, marginBottom: 30, alignItems:'center', borderWidth:1, marginLeft: '25%', marginRight:'25%', borderRadius:18}}
                     onPress={()=>{
                         appStore.events[this.state.categoryName][this.state.id - 1].going += 1;
-                        Alert.alert('Success!', 'You\'re now attending' + title);
+                        Alert.alert('Success!', 'You\'re now attending ' + title);
                         this.props.navigation.goBack();
                     }}    
                 >

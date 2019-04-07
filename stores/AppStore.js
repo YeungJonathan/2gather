@@ -9,7 +9,7 @@ class AppStore {
       interests: [
         { name: "Java", proficiency: 5 },
         { name: "Python", proficiency: 3 },
-        { name: "Mobile development", proficiency: 2 }
+        { name: "Mobile dev", proficiency: 2 }
       ],
       description:
         'Tech geek, Internet practitioner, Alcohol trailblazer.\nLoves new tech, vim > nano. \nCall me maybe.',
