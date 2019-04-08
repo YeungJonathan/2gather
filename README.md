@@ -3,7 +3,7 @@
 
 2gather - a solution to meetups for students.
 
-We made this project in 24 hours in Hackamon 2018.
+We made this project in 24 hours in Hackamon 2019.
 
 Project made in React Native and Firebase.
 
