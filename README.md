@@ -22,4 +22,4 @@ Requirement:
 Steps:
 1. Clone and Download the project files.
 2. npm i
-3. npm start
+3. expo start
