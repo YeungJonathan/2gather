@@ -3,6 +3,13 @@
 
 2gather - a solution to meetups for students.
 
+As a student, most of the meetups from other companies (for example Meetup) does not best suit for students. They are designed for professionals at that particular area to connect with others. However, student might not have the qualification to join such events. Facebook groups are not the finest solution as it is not an organized and formal way of addressing this issue.
+
+Hence we have build this mobile application which allows student to login, organize and join meetups based on their preffered interest and the meetup's recommended skills.
+
+Another Feature of this application is if student log in with their student account, we will grab what units that student is going to do in that particular meetup and suggest a series of meetups to help build up to a more complex skill for them to fit in their university courses.
+
+
 We made this project in 24 hours in Hackamon 2019.
 
 Project made in React Native and Firebase.
