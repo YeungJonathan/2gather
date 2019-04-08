@@ -8,7 +8,7 @@ We made this project in 24 hours in Hackamon 2018.
 Project made in React Native and Firebase.
 
 ## Development Team
-- [Jonathan Yeung](https://github.com/YeungJonathan)
+- [Jonathan Yeung (Team Lead)](https://github.com/YeungJonathan)
 - [Marcus Ooi](https://github.com/MarcusKJOoi)
 - [Zain Shroff](https://github.com/zain610)
 - [Tricia Wajaya](https://github.com/TriciaWijaya)
