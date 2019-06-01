@@ -16,7 +16,7 @@ Project made in React Native and Firebase.
 
 ## How does it work
 
-<img src="screenShots/login.png" width="60%">
+<img src="screenShots/login.png" height="60%">
 
 
 ## Development Team
