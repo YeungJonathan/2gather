@@ -16,6 +16,8 @@ Project made in React Native and Firebase.
 
 ## How does it work
 
+Below are some screenshots of how the program looks.
+
 <img src="screenShots/login.png" width="30%"> <img src="screenShots/mainPage.png" width="30%">
 <img src="screenShots/event.png" width="30%">
 <img src="screenShots/eventDetails.png" width="30%">
