@@ -16,8 +16,11 @@ Project made in React Native and Firebase.
 
 ## How does it work
 
-<img src="screenShots/login.png" height="60%">
-
+<img src="screenShots/login.png" width="30%"> <img src="screenShots/mainPage.png" width="30%">
+<img src="screenShots/event.png" width="30%">
+<img src="screenShots/eventDetails.png" width="30%">
+<img src="screenShots/sideMenu.png" width="30%">
+<img src="screenShots/myProfile.png" width="30%">
 
 ## Development Team
 - [Jonathan Yeung (Team Lead)](https://github.com/YeungJonathan)
