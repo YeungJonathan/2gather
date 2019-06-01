@@ -14,6 +14,10 @@ We made this project in 24 hours in Hackamon 2019.
 
 Project made in React Native and Firebase.
 
+## How does it work
+
+Simulator Screen Shot - iPhone X - 2019-06-01 at 12.58.01.png
+
 ## Development Team
 - [Jonathan Yeung (Team Lead)](https://github.com/YeungJonathan)
 - [Marcus Ooi](https://github.com/MarcusKJOoi)
