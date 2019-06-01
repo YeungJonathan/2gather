@@ -16,7 +16,8 @@ Project made in React Native and Firebase.
 
 ## How does it work
 
-Simulator Screen Shot - iPhone X - 2019-06-01 at 12.58.01.png
+<img src="screenShots/login.png" width="60%">
+
 
 ## Development Team
 - [Jonathan Yeung (Team Lead)](https://github.com/YeungJonathan)
