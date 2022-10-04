@@ -14,7 +14,7 @@
     "@expo/samples": "2.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "date-fns": "^2.0.0-alpha.27",
-    "expo": "^32.0.0",
+    "expo": "^46.0.14",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
     "react": "16.5.0",
